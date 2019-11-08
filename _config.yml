@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Subhodeep Sarkar"
 title_separator          : "-"
 name                     : &name "Subhodeep Sarkar"
-description              : &description "Junior Research Fellow"
+description              : &description "Ph.D. Scholar"
 url                      : https://academicpages.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "subhodeeps/subhodeeps.github.io"
@@ -81,8 +81,8 @@ analytics:
 # Site Author
 author:
   name             : "Subhodeep Sarkar"
-  avatar           : "profile.png"
-  bio              : "Junior Research Fellow at Indian Institute of Information Technology, Allahabad"
+  avatar           : "cv2.jpg"
+  bio              : "Ph.D. Scholar at Indian Institute of Information Technology, Allahabad"
   location         : "Uttar Pradesh, India"
   employer         :
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
