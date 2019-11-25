@@ -9,6 +9,7 @@ redirect_from:
 
 {% include base_path %}
 You can download my complete CV from [here](https:subhodeeps.github.io/files/cv_subhodeepiiita.pdf)
+<a href="subhodeeps.github.io/files/cv_subhodeepiiita.pdf" target="_blank">PDF.</a>
 ## Education
 
 * B.Sc. (Honours) in Physics, University of Calcutta, Kolkata (2016)
