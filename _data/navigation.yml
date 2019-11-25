@@ -3,4 +3,4 @@ main:
   - title: "CV"
     url: /cv/
   - title: "Blog"
-    url: /blog/
+    url: /blog/{:target="_blank" rel="noopener"}
