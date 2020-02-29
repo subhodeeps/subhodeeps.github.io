@@ -190,7 +190,7 @@ collections:
 collections:
    books:
      output: true
-      permalink: /:collection/:title/
+      permalink: /:collection/:path/
 
 # Defaults
 defaults:
