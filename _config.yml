@@ -187,7 +187,10 @@ collections:
   talks:
     output: true
     permalink: /:collection/:path/
-
+collections:
+   books:
+     output: true
+      permalink: /:collection/:title/
 
 # Defaults
 defaults:
