@@ -4,3 +4,5 @@ main:
     url: /cv/
   - title: "Blog"
     url: /blog/
+  - title: "Book Reviews"
+    url: /books/
