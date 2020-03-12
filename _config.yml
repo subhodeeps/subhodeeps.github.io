@@ -81,7 +81,7 @@ analytics:
 # Site Author
 author:
   name             : "Subhodeep Sarkar"
-  avatar           : "profile1.jpeg"
+  avatar           : "cv2.png"
   bio              : "Ph.D. Scholar (Physics), Indian Institute of Information Technology, Allahabad"
   location         : "Uttar Pradesh, India"
   employer         :
@@ -187,9 +187,7 @@ collections:
   talks:
     output: true
     permalink: /:collection/:path/
-  books:
-    poutput: true
-    permalink: /:collection/:title/
+ 
 
 # Defaults
 defaults:
