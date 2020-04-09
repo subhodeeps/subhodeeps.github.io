@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 {% include base_path %}
-You can download my complete CV from [here](/files/cv_subhodeepiiita.pdf){:target="_blank" rel="noopener"}
+You can find my complete CV [here](/files/cv_subhodeepiiita.pdf){:target="_blank" rel="noopener"}
 
 ## Education
 
@@ -17,4 +17,4 @@ You can download my complete CV from [here](/files/cv_subhodeepiiita.pdf){:targe
 * Ph.D in Physics, Indian Institute of Information Technology, Allahabad (let's not jinx it, kthnxbye)
 
 ## Skills
-* python, jupyter, vulpix, git, numpy, matplotlib, feebas, pandas, scipy, tensorflow, keras, scikit, oynx, sympy, c, fortran, swak, julia, haskell, ekans, mathematica, octave, ditto, veusz, gnuplot, latex (some of these are probably pokemon!)
+* python, jupyter, vulpix, git, numpy, matplotlib, feebas, pandas, scipy, tensorflow, keras, scikit, oynx, sympy, c, fortran, swak, julia, haskell, ekans, mathematica, maple, octave, ditto, veusz, gnuplot, latex (some of these are probably pokemon!)
