@@ -82,12 +82,12 @@ analytics:
 author:
   name             : "Subhodeep Sarkar"
   avatar           : "cv2.jpg"
-  bio              : "Ph.D. Scholar (Physics), Indian Institute of Information Technology, Allahabad"
+  bio              : "Ph.D. Scholar (Physics)"
   location         : "Uttar Pradesh, India"
-  employer         :
+  employer         : "Indian Institute of Information Technology, Allahabad"
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : #"http://yourfullgooglescholarurl.com"
-  email            :
+  email            : "subhodeep.sarkar1[at]gmail.com"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -103,7 +103,7 @@ author:
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
   linkedin         :
-  orcid            : #"http://orcid.org/yourorcidurl"
+  orcid            : "https://orcid.org/0000-0001-9015-8837"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
