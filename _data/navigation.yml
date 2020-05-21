@@ -3,4 +3,5 @@ main:
   - title: "CV"
     url: /cv/
   - title: "Blog"
-    url: /blog/
+    #url: /blog/
+    url: /year-archive/
