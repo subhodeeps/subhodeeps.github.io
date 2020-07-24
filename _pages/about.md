@@ -1,6 +1,5 @@
 ---
 permalink: /
-title: "Hey!"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -8,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a Ph.D. student at the Indian Institute of Information Technology, Allahabad, working under the supervision of [Dr. Srijit Bhattacharjee](http://profile.iiita.ac.in/srijit/). My broad area of interest is *general relativity and black hole physics*. I am also working as a teaching assistant at the institute. 
+I am Subhodeep, a Ph.D. student at the Indian Institute of Information Technology, Allahabad. I'm working under the supervision of [Dr. Srijit Bhattacharjee](http://profile.iiita.ac.in/srijit/) and my broad area of interest is *gravitational and black hole physics*. 
 
 Update:
 -------
