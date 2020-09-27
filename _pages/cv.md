@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 {% include base_path %}
-You can find my complete CV [here](/files/cv_subhodeepiiita.pdf){:target="_blank" rel="noopener"}
+You can find my complete CV [here](/files/CVsubhodeepiiita.pdf){:target="_blank" rel="noopener"}
 
 ## Education
 
