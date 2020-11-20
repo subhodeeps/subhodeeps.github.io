@@ -12,6 +12,7 @@ Hey! I am Subhodeep, a Ph.D. student at the Indian Institute of Information Tech
 
 Update:
 -------
+- **18 Nov 2020:** The preprint of our latest work, [*Scalar perturbations of black holes in Jackiw-Teitelboim gravity*](https://arxiv.org/abs/2011.08179) is now available on the arXiv.
 - **17 Aug 2020:** [*Mass inflation and strong cosmic censorship in a nonextreme BTZ black hole*](https://doi.org/10.1103/PhysRevD.102.044030) has been publsihed in Physical Review D.
 - **21 May 2020:** The preprint of our latest work, [*Mass Inflation in a Non-Extreme Rotating BTZ Black Hole*](https://arxiv.org/abs/2005.09705), is now available on the arXiv.
 
