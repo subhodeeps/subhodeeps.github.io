@@ -86,7 +86,7 @@ author:
   location         : "India"
   employer         : #"https://www.iiita.ac.in/"
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : #"http://yourfullgooglescholarurl.com"
+  googlescholar    : "https://scholar.google.com/citations?user=WpYbE3oAAAAJ&hl=en"
   email            : "subhodeep[dot]sarkar1[at]gmail[dot]com"
   researchgate     : "https://www.researchgate.net/profile/Subhodeep_Sarkar"
   uri              :
