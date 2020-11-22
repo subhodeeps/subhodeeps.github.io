@@ -5,7 +5,7 @@ permalink: /publications/
 author_profile: true
 ---
 
-  You can also find my articles on <u><a href="{{https://inspirehep.net/literature?q=a%20S.Sarkar.12}}">my INSPIRE-HEP profile</a>.</u>
+  You can also find my articles on <u><a href="{https://inspirehep.net/literature?q=a%20S.Sarkar.12}">my INSPIRE-HEP profile</a>.</u>
 
  {% include base_path %}
 
