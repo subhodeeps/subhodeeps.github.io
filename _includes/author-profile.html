@@ -37,6 +37,15 @@
       {% if author.keybase %}
         <li><a href="https://keybase.io/{{ author.keybase }}"><i class="fas fa-fw fa-key" aria-hidden="true"></i> Keybase</a></li>
       {% endif %}
+       {% if author.inspire %}
+        <li><a href="{{ author.inspire }}"><i class="ai ai-inspire ai-fw"></i> iNSPIRE-HEP</a></li>
+      {% endif %}
+      {% if author.arXiv %}
+        <li><a href="{{ author.arXiv }}"><i class="ai ai-arxiv ai-fw"></i> arXiv</a></li>
+      {% endif %}
+      {% if author.googlescholar %}
+        <li><a href="{{ author.googlescholar }}"><i class="fas fa-fw fa-graduation-cap"></i> Google Scholar</a></li>
+      {% endif %}
        {% if author.researchgate %}
         <li><a href="{{ author.researchgate }}"><i class="fab fa-fw fa-researchgate" aria-hidden="true"></i> ResearchGate</a></li>
       {% endif %}
@@ -103,9 +112,6 @@
       {% if author.vine %}
         <li><a href="https://vine.co/u/{{ author.vine }}"><i class="fab fa-fw fa-vine" aria-hidden="true"></i> Vine</a></li>
       {% endif %}
-      {% if author.googlescholar %}
-        <li><a href="{{ author.googlescholar }}"><i class="fas fa-fw fa-graduation-cap"></i> Google Scholar</a></li>
-      {% endif %}
       {% if author.pubmed %}
         <li><a href="{{ author.pubmed }}"><i class="ai ai-pubmed-square ai-fw"></i> PubMed</a></li>
       {% endif %}
@@ -118,12 +124,6 @@
       {% if author.wikipedia %}
         <li><a href="https://en.wikipedia.org/wiki/User:{{ author.wikipedia }}"><i class="fab fa-fw fa-wikipedia-w" aria-hidden="true"></i> Wikipedia</a></li>
       {% endif %}
-      {% if author.inspire %}
-        <li><a href="{{ author.inspire }}"><i class="ai ai-inspire-square ai-fw"></i> iNSPIRE-HEP</a></li>
-      {% endif %}
-      {% if author.arXiv %}
-        <li><a href="{{ author.arXiv }}"><i class="ai ai-arxiv-square ai-fw"></i> arXiv</a></li>
-      {% endif %}
-    </ul>
+      </ul>
   </div>
 </div>
