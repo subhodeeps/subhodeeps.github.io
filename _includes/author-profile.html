@@ -121,6 +121,9 @@
       {% if author.inspire %}
         <li><a href="{{ author.inspire }}"><i class="ai ai-inspire-square ai-fw"></i> iNSPIRE-HEP</a></li>
       {% endif %}
+      {% if author.arXiv %}
+        <li><a href="{{ author.arXiv }}"><i class="ai ai-arxiv-square ai-fw"></i> arXiv</a></li>
+      {% endif %}
     </ul>
   </div>
 </div>
