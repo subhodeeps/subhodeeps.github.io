@@ -88,6 +88,9 @@ author:
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=WpYbE3oAAAAJ&hl=en"
   email            : "subhodeep[dot]sarkar1[at]gmail[dot]com"
+  inspire          : "https://inspirehep.net/authors/1797180?ui-citation-summary=true&ui-exclude-self-citations=true"
+  arXiv            : "https://arxiv.org/a/sarkar_s_11.html"
+  orcid            : "https://orcid.org/0000-0001-9015-8837"
   researchgate     : "https://www.researchgate.net/profile/Subhodeep_Sarkar"
   uri              :
   bitbucket        :
@@ -103,7 +106,6 @@ author:
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
   linkedin         :
-  orcid            : "https://orcid.org/0000-0001-9015-8837"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
@@ -115,8 +117,7 @@ author:
   xing             :
   youtube          :
   wikipedia        :
-  inspire          : "https://inspirehep.net/authors/1797180?ui-citation-summary=true&ui-exclude-self-citations=true"
-
+  
 
 # Reading Files
 include:
