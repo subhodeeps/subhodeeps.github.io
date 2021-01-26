@@ -1,6 +1,6 @@
 ---
 title: "Links to some good lecture notes and other useful online resources"
-collection: teaching
+#collection: teaching
 #type: "Undergraduate course"
 permalink: /teaching/onlineres
 #venue: "University 1, Department"
