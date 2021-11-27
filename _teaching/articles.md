@@ -4,12 +4,4 @@ title: "Some articles, essays, etc. that I've enjoyed reading"
 ---
 
 
-
-Heading 1
-======
-
-Heading 2
-======
-
-Heading 3
-======
+[The man who invented black holes](https://drive.google.com/file/d/1u7Y6gFqZwb75FSdEb_OwvyNoQL3uoSxb/view?usp=sharing), Gray Gibbons (New Scientist, 26 June 1979).
