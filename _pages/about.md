@@ -4,7 +4,7 @@ title: "Subhodeep's Homepage"
 excerpt: ""
 author_profile: true
 header:
-  overlay_image: books.png
+  image: books.png
   overlay_filter: 0.3
 redirect_from: 
   - /about/
