@@ -1,10 +1,10 @@
 ---
 permalink: /
 title: "Subhodeep's Homepage"
-excerpt: ""
+excerpt: ""We are just an advanced breed of monkeys on a minor planet of a very average star. But we can understand the universe. That makes us something very special." ~ S. Hawking"
 author_profile: true
 header:
-  image: books.png
+  overlay_image: books.png
   overlay_filter: 0.3
 redirect_from: 
   - /about/
