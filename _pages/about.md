@@ -3,6 +3,9 @@ permalink: /
 title: "About"
 excerpt: "About me"
 author_profile: true
+header:
+  overlay_image: BBH.jpg
+  overlay_filter: 0.3
 redirect_from: 
   - /about/
   - /about.html
