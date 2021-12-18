@@ -1,7 +1,7 @@
 ---
 permalink: /
-title: "About"
-excerpt: "About me"
+title: "Subhodeep's Homepage"
+excerpt: ""
 author_profile: true
 header:
   overlay_image: bh.png
