@@ -13,6 +13,10 @@ redirect_from:
 
 Hey! I am Subhodeep, a Ph.D. student at the Indian Institute of Information Technology, Allahabad. I'm working under the supervision of [Dr. Srijit Bhattacharjee](http://profile.iiita.ac.in/srijit/) and my broad area of interest is *gravitational and black hole physics* with an emphasis on (but not limited to) the internal structure of black holes, quasinormal modes, gravitational lensing and black hole shadows. In simple terms, I use theoretical and computational tools to probe classical and quantum aspects of black holes and try to understand what they can say about the nature of reality. I am also interested in the prospect of doing fundamental physics with gravitational waves. To know more about my work, please check out my publications.
 
+My interest in physics and mathematics are however wide-ranging; beyond my graduate research work, I am keenly interested in exploring dynamical systems and applications of machine learning technqiues in physical sciences. I also take a lot of pleasure in teaching physics, mathematics and programming, and I am actively involved in assisting my supervisor in teaching several interdisciplinary postgraduate courses like  *Statistics for Bioinformatics*, *Computational Methods in Physical Sciences using Python*, and *Simulation and Modelling*.
+
+Please feel free to get in touch if you would like to discuss and study some of the broad topics that I've mentioned! 
+
 Update:
 -------
 - **04 Apr 2022:** [*Can we detect a supertranslated black hole?*](https://doi.org/10.1103/PhysRevD.105.084001) has been published in Physical Review D. The preprint can be found on the [arXiv](https://doi.org/10.48550/arXiv.2110.03547).
