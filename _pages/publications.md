@@ -9,23 +9,21 @@ author_profile: true
   
 
 
- <!DOCTYPE html> 
+
+
+
 <html lang="en-US" xml:lang="en-US" > 
 <head>
-
-
- 
 <meta  charset="utf-8" /> 
 <meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)" /> 
 <meta name="viewport" content="width=device-width,initial-scale=1" /> 
 <link rel="stylesheet" type="text/css" href="/_pages/publications.css" /> 
-<meta name="src" content="publications.tex" /> 
 </head>
   
   
 <body>
 <h3 class="likesectionHead"><a 
- id="x1-1000"></a>References</h3>
+ id="x1-1000"></a>Published Papers</h3>
 <!--l. 2--><p class="noindent" >
    </p><div class="thebibliography">
    <p class="bibitem" ><span class="biblabel">
