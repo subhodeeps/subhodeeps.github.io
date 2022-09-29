@@ -9,7 +9,7 @@ author_profile: true
   
 
 <html lang="en-US" xml:lang="en-US" > 
-<head><title></title> 
+ 
 <meta  charset="utf-8" /> 
 <meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)" /> 
 <meta name="viewport" content="width=device-width,initial-scale=1" /> 
