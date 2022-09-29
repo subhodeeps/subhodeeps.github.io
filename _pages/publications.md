@@ -8,8 +8,8 @@ author_profile: true
   You can also find my latest articles on [my **INSPIRE-HEP** profile](https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=exactauthor%3A%20S.Sarkar.12&ui-citation-summary=true&ui-exclude-self-citations=true).
   
 
-<!DOCTYPE html> 
 <html lang="en-US" xml:lang="en-US" > 
+<head><title></title> 
 <meta  charset="utf-8" /> 
 <meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)" /> 
 <meta name="viewport" content="width=device-width,initial-scale=1" /> 
@@ -18,11 +18,47 @@ author_profile: true
 </head><body 
 >
 <h3 class="likesectionHead"><a 
- id="x1-1000"></a>Publications</h3>
+ id="x1-1000"></a>Published Papers</h3>
 <!--l. 2--><p class="noindent" >
    </p><div class="thebibliography">
    <p class="bibitem" ><span class="biblabel">
  [1]<span class="bibsp">   </span></span>
+   <a 
+ id="XSarkar:2021djs"></a>S. Sarkar,
+   S. Kumar
+   and
+   S. Bhattacharjee,
+   <span 
+class="cmti-10">Can</span>
+   <span 
+class="cmti-10">we</span>
+   <span 
+class="cmti-10">detect</span>
+   <span 
+class="cmti-10">a</span>
+   <span 
+class="cmti-10">supertranslated</span>
+   <span 
+class="cmti-10">black</span>
+   <span 
+class="cmti-10">hole?</span>,
+   <a 
+href="https://doi.org/10.1103/PhysRevD.105.084001" ><span 
+class="cmti-10">Phys.</span>
+   <span 
+class="cmti-10">Rev.</span>
+   <span 
+class="cmti-10">D</span>
+   <span 
+class="cmbx-10">105</span>
+   (2022)
+   084001</a>
+   [<a 
+href="https://arxiv.org/abs/2110.03547" ><span 
+class="cmtt-10">2110.03547</span></a>].
+   </p>
+   <p class="bibitem" ><span class="biblabel">
+ [2]<span class="bibsp">   </span></span>
    <a 
  id="XBhattacharjee:2020nul"></a>S. Bhattacharjee,
    S. Sarkar
@@ -60,11 +96,13 @@ href="https://arxiv.org/abs/2011.08179" ><span
 class="cmtt-10">2011.08179</span></a>].
    </p>
    <p class="bibitem" ><span class="biblabel">
- [2]<span class="bibsp">   </span></span>
+ [3]<span class="bibsp">   </span></span>
    <a 
  id="XBhattacharjee:2020gbo"></a>S. Bhattacharjee,
    S. Kumar
    and
+                                                                                            
+                                                                                            
    S. Sarkar,
    <span 
 class="cmti-10">Mass</span>
@@ -104,49 +142,15 @@ class="cmbx-10">102</span>
    [<a 
 href="https://arxiv.org/abs/2005.09705" ><span 
 class="cmtt-10">2005.09705</span></a>].
-   </p>
-                                                                                            
-                                                                                            
-   <p class="bibitem" ><span class="biblabel">
- [3]<span class="bibsp">   </span></span>
-   <a 
- id="XSarkar:2021djs"></a>S. Sarkar,
-   S. Kumar
-   and
-   S. Bhattacharjee,
-   <span 
-class="cmti-10">Can</span>
-   <span 
-class="cmti-10">we</span>
-   <span 
-class="cmti-10">detect</span>
-   <span 
-class="cmti-10">a</span>
-   <span 
-class="cmti-10">supertranslated</span>
-   <span 
-class="cmti-10">black</span>
-   <span 
-class="cmti-10">hole?</span>,
-   <a 
-href="https://doi.org/10.1103/PhysRevD.105.084001" ><span 
-class="cmti-10">Phys.</span>
-   <span 
-class="cmti-10">Rev.</span>
-   <span 
-class="cmti-10">D</span>
-   <span 
-class="cmbx-10">105</span>
-   (2022)
-   084001</a>
-   [<a 
-href="https://arxiv.org/abs/2110.03547" ><span 
-class="cmtt-10">2110.03547</span></a>].
 </p>
    </div>
     
 </body> 
 </html>
+                                                                                            
+
+
+
                                                                                             
 
 
