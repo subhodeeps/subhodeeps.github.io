@@ -8,7 +8,8 @@ author_profile: true
   You can also find my latest articles on [my **INSPIRE-HEP** profile](https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=exactauthor%3A%20S.Sarkar.12&ui-citation-summary=true&ui-exclude-self-citations=true).
   
 
-<!DOCTYPE html> 
+
+ <!DOCTYPE html> 
 <html lang="en-US" xml:lang="en-US" > 
 <head><title></title> 
 <meta  charset="utf-8" /> 
@@ -151,11 +152,6 @@ class="cmtt-10">2005.09705</span></a>].
                                                                                             
 
 
-
-
-
-
-                                                                                            
 
 
 
