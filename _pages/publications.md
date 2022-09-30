@@ -20,12 +20,12 @@ author_profile: true
 <meta  charset="utf-8" /> 
 <meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)" /> 
 <meta name="viewport" content="width=device-width,initial-scale=1" /> 
-<link rel="stylesheet" type="text/css" href="publications.css" /> 
+<link rel="stylesheet" type="text/css" href="/_pages/publications.css" /> 
 <meta name="src" content="publications.tex" /> 
 </head><body 
 >
 <h3 class="likesectionHead"><a 
- id="x1-1000"></a>References</h3>
+ id="x1-1000"></a>Published Papers</h3>
 <!--l. 2--><p class="noindent" >
    </p><div class="thebibliography">
    <p class="bibitem" ><span class="biblabel">
@@ -184,15 +184,16 @@ href="#x1-1000doc"><span id="textcolor1"><span
 class="tcrm-1000">&#8225;</span></span></a>
 </p>
    </div>
-<!--l. 40--><p class="noindent" ><span id="textcolor2"><span 
+<!--l. 40--><p class="noindent" ><a 
+href="https://doi.org/10.1093/reseval/rvy008" ><span id="textcolor2"><span 
 class="tcrm-0800">&#8225;</span></span> <span 
-class="cmr-8">Authors listed alphabetically.</span> <a 
+class="cmr-8">Authors listed alphabetically.</span></a> <a 
  id="x1-1000doc"></a>
 </p>
     
 </body> 
 </html>
-                                                                                            
+                                                                                                                                                                                       
 ---
                                                                                             
 Please visit [my **INSPIRE-HEP** profile](https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=exactauthor%3A%20S.Sarkar.12&ui-citation-summary=true&ui-exclude-self-citations=true) for bibliometrics and a possibly updated list of papers.
