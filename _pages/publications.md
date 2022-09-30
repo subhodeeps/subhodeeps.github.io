@@ -22,7 +22,7 @@ author_profile: true
 <html xmlns="http://www.w3.org/1999/xhtml"  
 > 
 <head>
-   <title></title> 
+  
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
 <meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)" /> 
 <meta name="originator" content="TeX4ht (https://tug.org/tex4ht/)" /> 
