@@ -15,9 +15,8 @@ author_profile: true
   - Black Hole Shadows
 
 ---
-
 <html lang="en-US" xml:lang="en-US" > 
-<head>
+<head><title>
 <meta  charset="utf-8" /> 
 <meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)" /> 
 <meta name="viewport" content="width=device-width,initial-scale=1" /> 
@@ -26,7 +25,7 @@ author_profile: true
 </head><body 
 >
 <h3 class="likesectionHead"><a 
- id="x1-1000"></a>Published Papers</h3>
+ id="x1-1000"></a>References</h3>
 <!--l. 2--><p class="noindent" >
    </p><div class="thebibliography">
    <p class="bibitem" ><span class="biblabel">
@@ -68,7 +67,12 @@ class="cmbx-10">105</span>
    084001</a>
    [<a 
 href="https://arxiv.org/abs/2110.03547" ><span 
-class="cmtt-10">2110.03547</span></a>].
+class="cmtt-10">2110.03547</span></a>]
+   <a 
+href="https://inspirehep.net/literature/1940051" ><span 
+class="cmsy-10">{</span><span 
+class="cmtt-10">INSPIRE</span><span 
+class="cmsy-10">}</span></a>.
    </p>
    <p class="bibitem" ><span class="biblabel">
  [2]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>
@@ -111,10 +115,15 @@ class="cmbx-10">103</span>
    024008</a>
    [<a 
 href="https://arxiv.org/abs/2011.08179" ><span 
-class="cmtt-10">2011.08179</span></a>].
+class="cmtt-10">2011.08179</span></a>]
+   <a 
+href="https://inspirehep.net/literature/1830603" ><span 
+class="cmsy-10">{</span><span 
+class="cmtt-10">INSPIRE</span><span 
+class="cmsy-10">}</span></a>.
+                                                                                            
+                                                                                            
    </p>
-                                                                                            
-                                                                                            
    <p class="bibitem" ><span class="biblabel">
  [3]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>
    <a 
@@ -164,17 +173,27 @@ class="cmbx-10">102</span>
    044030</a>
    [<a 
 href="https://arxiv.org/abs/2005.09705" ><span 
-class="cmtt-10">2005.09705</span></a>].
-   <span id="textcolor1">***</span>
+class="cmtt-10">2005.09705</span></a>]
+   <a 
+href="https://inspirehep.net/literature/1797104" ><span 
+class="cmsy-10">{</span><span 
+class="cmtt-10">INSPIRE</span><span 
+class="cmsy-10">}</span></a>.
+   <span id="textcolor1"><span 
+class="tcrm-1000">&#8225;</span></span>
 </p>
    </div>
 <!--l. 40--><p class="noindent" ><span id="textcolor2"><span 
-class="cmr-8">***</span></span> <span 
+class="tcrm-0800">&#8225;</span></span> <span 
 class="cmr-8">Authors listed alphabetically.</span>
 </p>
     
 </body> 
 </html>
+                                                                                            
+
+
+
 
 ---
                                                                                             
