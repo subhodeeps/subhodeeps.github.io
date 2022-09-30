@@ -8,11 +8,11 @@ author_profile: true
 ### Research Interests 
 
 - Gravitational and Black Hole Physics
- - Black Hole Perturbation Theory
- - Quasinormal Modes of Black Holes
- - Internal Structure of Black Holes
- - Semi-classical Aspects of Gravity
- - Black Hole Shadows
+ -- Black Hole Perturbation Theory
+ -- Quasinormal Modes of Black Holes
+ -- Internal Structure of Black Holes
+ -- Semi-classical Aspects of Gravity
+ -- Black Hole Shadows
 
 <html lang="en-US" xml:lang="en-US" > 
 <head>
