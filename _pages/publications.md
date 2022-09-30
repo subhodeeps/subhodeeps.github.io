@@ -14,6 +14,8 @@ author_profile: true
   - Semi-classical Aspects of Gravity
   - Black Hole Shadows
 
+---
+
 <html lang="en-US" xml:lang="en-US" > 
 <head>
 <meta  charset="utf-8" /> 
@@ -173,6 +175,8 @@ class="cmr-8">Authors listed alphabetically.</span>
     
 </body> 
 </html>
+
+---
                                                                                             
 Please visit [my **INSPIRE-HEP** profile](https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=exactauthor%3A%20S.Sarkar.12&ui-citation-summary=true&ui-exclude-self-citations=true) for bibliographic metrics and a possibly updated list of papers.
   
