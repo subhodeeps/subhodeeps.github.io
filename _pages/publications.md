@@ -9,19 +9,15 @@ author_profile: true
   
 
 
-
-
-
 <html lang="en-US" xml:lang="en-US" > 
 <head>
 <meta  charset="utf-8" /> 
 <meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)" /> 
 <meta name="viewport" content="width=device-width,initial-scale=1" /> 
 <link rel="stylesheet" type="text/css" href="/_pages/publications.css" /> 
-</head>
-  
-  
-<body>
+<meta name="src" content="publications.tex" /> 
+</head><body 
+>
 <h3 class="likesectionHead"><a 
  id="x1-1000"></a>Published Papers</h3>
 <!--l. 2--><p class="noindent" >
@@ -29,10 +25,15 @@ author_profile: true
    <p class="bibitem" ><span class="biblabel">
  [1]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>
    <a 
- id="XSarkar:2021djs"></a>S.&#x00A0;Sarkar,
-   S.&#x00A0;Kumar
+ id="XSarkar:2021djs"></a><span 
+class="cmbx-10">Subhodeep</span>
+   <span 
+class="cmbx-10">Sarkar</span>,
+   Shailesh
+   Kumar
    and
-   S.&#x00A0;Bhattacharjee,
+   Srijit
+   Bhattacharjee,
    <span 
 class="cmti-10">Can</span>
    <span 
@@ -65,10 +66,15 @@ class="cmtt-10">2110.03547</span></a>].
    <p class="bibitem" ><span class="biblabel">
  [2]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>
    <a 
- id="XBhattacharjee:2020nul"></a>S.&#x00A0;Bhattacharjee,
-   S.&#x00A0;Sarkar
+ id="XBhattacharjee:2020nul"></a>Srijit
+   Bhattacharjee,
+   <span 
+class="cmbx-10">Subhodeep</span>
+   <span 
+class="cmbx-10">Sarkar</span>
    and
-   A.&#x00A0;Bhattacharyya,
+   Arpan
+   Bhattacharyya,
    <span 
 class="cmti-10">Scalar</span>
    <span 
@@ -100,15 +106,20 @@ class="cmbx-10">103</span>
 href="https://arxiv.org/abs/2011.08179" ><span 
 class="cmtt-10">2011.08179</span></a>].
    </p>
+                                                                                            
+                                                                                            
    <p class="bibitem" ><span class="biblabel">
  [3]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>
    <a 
- id="XBhattacharjee:2020gbo"></a>S.&#x00A0;Bhattacharjee,
-   S.&#x00A0;Kumar
+ id="XBhattacharjee:2020gbo"></a>Srijit
+   Bhattacharjee,
+   Shailesh
+   Kumar
    and
-                                                                                            
-                                                                                            
-   S.&#x00A0;Sarkar,
+   <span 
+class="cmbx-10">Subhodeep</span>
+   <span 
+class="cmbx-10">Sarkar</span>,
    <span 
 class="cmti-10">Mass</span>
    <span 
@@ -147,12 +158,19 @@ class="cmbx-10">102</span>
    [<a 
 href="https://arxiv.org/abs/2005.09705" ><span 
 class="cmtt-10">2005.09705</span></a>].
+   <span id="textcolor1">***</span>
 </p>
    </div>
+<!--l. 40--><p class="noindent" ><span id="textcolor2"><span 
+class="cmr-8">***</span></span> <span 
+class="cmr-8">Authors listed alphabetically.</span>
+</p>
     
 </body> 
 </html>
                                                                                             
+
+
 
                     
 
