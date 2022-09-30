@@ -28,11 +28,11 @@ author_profile: true
 <meta name="originator" content="TeX4ht (https://tug.org/tex4ht/)" /> 
 <!-- html,xhtml --> 
 <meta name="src" content="publications.tex" /> 
-<link rel="stylesheet" type="text/css" href="publications.css" /> 
+<link rel="stylesheet" type="text/css" href="/_pages/publications.css" /> 
 </head><body 
 >
 <h3 class="likesectionHead"><a 
- id="x1-1000"></a>References</h3>
+ id="x1-1000"></a>Published Papers</h3>
 <!--l. 2--><p class="noindent" >
    </p><div class="thebibliography">
    <p class="bibitem" ><span class="biblabel">
