@@ -4,9 +4,9 @@ title: "Subhodeep's Homepage"
 excerpt: "'We are just an advanced breed of monkeys on a minor planet of a very average star. But we can understand the universe. That makes us something very special.' - Stephen Hawking (Der Spiegel, 16 Oct 1988)"
 author_profile: true
 header:
-  overlay_image: books.png
-  overlay_filter: 0.7
-redirect_from: 
+  overlay_image: header.png
+  overlay_filter: 0.6
+redirect_from:
   - /about/
   - /about.html
 ---
@@ -15,7 +15,7 @@ Hey! I am Subhodeep, a Ph.D. student at the Indian Institute of Information Tech
 
 My interest in physics and mathematics are however wide-ranging; beyond my graduate research work, I am keenly interested in exploring dynamical systems and applications of machine learning technqiues in physical sciences. I also take a lot of pleasure in teaching physics, mathematics and programming, and I am actively involved in assisting my supervisor in teaching a diverse range of subjects like numerical methods and computational physics, biostatistics, Python programming, and classical and quantum mechanics.
 
-I also enjoy meeting and collaborating with new people. So, please feel free to get in touch if you would like to discuss and study some of the broad topics that I've mentioned! 
+I also enjoy meeting and collaborating with new people. So, please feel free to get in touch if you would like to discuss and study some of the broad topics that I've mentioned!
 
 Update:
 -------
@@ -25,9 +25,3 @@ Update:
 - **18 Nov 2020:** The preprint of our latest work, [*Scalar perturbations of black holes in Jackiw-Teitelboim gravity*](https://arxiv.org/abs/2011.08179) is now available on the arXiv.
 - **17 Aug 2020:** [*Mass inflation and strong cosmic censorship in a nonextreme BTZ black hole*](https://doi.org/10.1103/PhysRevD.102.044030) has been publsihed in Physical Review D.
 - **21 May 2020:** The preprint of our latest work, [*Mass inflation and strong cosmic censorship in a nonextreme BTZ black hole*](https://arxiv.org/abs/2005.09705), is now available on the arXiv.
-
-
-
-
-
-
