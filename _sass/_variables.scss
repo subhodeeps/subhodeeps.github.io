@@ -61,11 +61,14 @@ $text-color                 : #eaeaea;
 $border-color               : mix(#fff, $background-color, 20%);
 
 /* primary-color              : #f21368; */ /* from Neon theme */
-$primary-color              : #8cd2d5;
+/* $primary-color              : #772953; */ /* CANONICAL AUBERGINE */
+$primary-color              : #e95420; /* (UBUNTU ORANGE) */
+/* $primary-color              : #8cd2d5; */ //original
 $success-color              : #62c462;
 $warning-color              : #f89406;
 $danger-color               : #ee5f5b;
-$info-color                 : #52adc8;
+/* $info-color                 : #52adc8; */ //Original
+$info-color                 : #EB6536; //Ubuntu Orange
 
 /* brands */
 $behance-color              : #1769FF;
@@ -93,8 +96,9 @@ $xing-color                 : #006567;
 $orcid-color                : #a6ce39;
 
 /* links */
-/* $link-color                 :$primary-color; */ /* for Neon theme */
- $link-color                 : mix(#000, $info-color, 15%) !default;
+/*$link-color                 :$primary-color; */ /* for Neon theme */
+/* $link-color                 : mix(#000, $info-color, 15%) !default; */
+$link-color                 : #ED764D; // Ubuntu Orange
 $link-color-hover           : mix(#000, $link-color, 25%) !default;
 $link-color-visited         : mix(#fff, $link-color, 15%) !default;
 $masthead-link-color        : $primary-color !default;
