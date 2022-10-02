@@ -91,7 +91,10 @@ author:
   inspire          : "https://inspirehep.net/authors/1797180?ui-citation-summary=true&ui-exclude-self-citations=true"
   arXiv            : "https://arxiv.org/a/sarkar_s_11.html"
   orcid            : "https://orcid.org/0000-0001-9015-8837"
+  semanticscholar  : "https://www.semanticscholar.org/author/Subhodeep-Sarkar/9729924"
   researchgate     : "https://www.researchgate.net/profile/Subhodeep_Sarkar"
+  reseacherid      : "https://www.webofscience.com/wos/author/rid/ABE-9289-2020"
+  scopus           : "https://www.scopus.com/authid/detail.uri?authorId=57217449946"
   uri              :
   bitbucket        :
   codepen          :
@@ -102,10 +105,10 @@ author:
   github           : "subhodeeps"
   google_plus      :
   keybase          :
-  instagram        :
+  instagram        : "hello.trashfire.century"
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         :
+  linkedin         : "subhodeeps/"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
@@ -117,7 +120,7 @@ author:
   xing             :
   youtube          :
   wikipedia        :
-  
+
 
 # Reading Files
 include:
@@ -189,7 +192,7 @@ collections:
   talks:
     output: true
     permalink: /:collection/:path/
- 
+
 
 # Defaults
 defaults:
