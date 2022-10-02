@@ -4,7 +4,7 @@ title: "Subhodeep's Homepage"
 excerpt: " >We are just an advanced breed of monkeys on a minor planet of a very average star. But we can understand the universe. That makes us something very special. -- Stephen Hawking (Der Spiegel, 16 Oct 1988)"
 author_profile: true
 header:
-  overlay_image: header.png
+  overlay_image: header_dark.png
   overlay_filter: 0.6
 redirect_from:
   - /about/
