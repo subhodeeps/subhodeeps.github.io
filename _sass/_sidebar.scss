@@ -6,44 +6,51 @@
    Default
    ========================================================================== */
 
-.sidebar {
-  @include clearfix();
-  margin-bottom: 1em;
+   .sidebar {
+     -webkit-transform: translate3d(0, 0 , 0);
+             transform: translate3d(0, 0 , 0);
 
-  @include breakpoint($large) {
-    @include span(2 of 12);
-    opacity: 0.75;
-    -webkit-transition: opacity 0.2s ease-in-out;
-    transition: opacity 0.2s ease-in-out;
+     @include clearfix();
+     margin-bottom: 1em;
 
-    &:hover {
-      opacity: 1;
-    }
-  }
+     @include breakpoint($large) {
+       @include span(2 of 12);
+       opacity: 1;
+       -webkit-transition: opacity 0.2s ease-in-out;
+               transition: opacity 0.2s ease-in-out;
 
-  @include breakpoint($x-large) {
-    padding-right: 0;
-  }
+       &:hover {
+         opacity: 1;
+       }
+     }
 
-  h2, h3, h4, h5, h6 {
-    margin-bottom: 0;
-    font-family: $sans-serif-narrow;
-  }
 
-  h3, h4 {
-    font-size: $type-size-5;
-  }
+     @include breakpoint($x-large) {
+       padding-right: 0;
+     }
 
-  p, li {
-    font-family: $sans-serif;
-    font-size: $type-size-6;
-    line-height: 1.5;
-  }
+     h2, h3, h4, h5, h6 {
+       margin-bottom: 0;
+       font-family: $sans-serif-narrow;
+     }
 
-  img {
-    width: 100%;
-  }
-}
+     h3, h4 {
+       font-size: $type-size-5;
+     }
+
+     p, li {
+       font-family: $sans-serif;
+       font-size: $type-size-6;
+       line-height: 1.5;
+     }
+
+     img {
+       // width: 100%;
+
+       width: 100%;
+     }
+   }
+
 
 .sidebar__right {
   margin-bottom: 1em;
@@ -65,35 +72,35 @@
    Author profile and links
    ========================================================================== */
 
-.author__avatar {
-  display: table-cell;
-  vertical-align: top;
-  width: 1000px;
-  // set width only, for non-square avatars
-  // height: 1000px;
+   .author__avatar {
+     display: table-cell;
+     vertical-align: top;
+     width: 1000px;
+     // set width only, for non-square avatars
+     // height: 1000px;
 
-  @include breakpoint($large) {
-    display: block;
-    width: auto;
-    height: auto;
-  }
+     @include breakpoint($large) {
+       display: block;
+       width: auto;
+       height: auto;
+     }
 
-  img {
-    max-width: 1000px;
-    border-radius: 50%;
+     img {
+       max-width: 1000px;
+       border-radius: 50%;
 
-    @include breakpoint($large) {
-      padding: 5px;
-      border: 1px solid $border-color;
-    }
-  }
-}
+       @include breakpoint($large) {
+         padding: 5px;
+         border: 1px solid $border-color;
+       }
+     }
+   }
 
 .author__content {
-  display: table-cell;
-  vertical-align: top;
-  padding-left: 15px;
-  padding-right: 25px;
+  // display: table-cell;
+  // vertical-align: top;
+  // padding-left: 15px;
+  // padding-right: 25px;
   line-height: 1;
 
   @include breakpoint($large) {
@@ -102,10 +109,16 @@
     padding-left: 0;
     padding-right: 0;
   }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
 .author__name {
-  margin: 0;
+  margin:  1;
+
 
   @include breakpoint($large) {
     margin-top: 10px;
@@ -120,6 +133,7 @@
 .author__bio {
   margin: 0;
 
+
   @include breakpoint($large) {
     margin-top: 10px;
     margin-bottom: 20px;
@@ -127,12 +141,20 @@
 }
 
 .author__urls-wrapper {
-  position: relative;
-  display: table-cell;
-  vertical-align: middle;
+  margin: 0;
+
+ // position: left;
+//  display: table-cell;
+ // vertical-align: left;
+ // vertical-align: right;
+
+//  padding-left: 15px;
+//  padding-right: 25px;
+//  line-height: 0;
   font-family: $sans-serif;
   z-index: 10;
-  position: relative;
+ position: relative;
+//  position: right;
   cursor: pointer;
 
   li:last-child {
@@ -143,6 +165,8 @@
 
   @include breakpoint($large) {
     display: block;
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
 
   button {
@@ -150,6 +174,8 @@
 
     @include breakpoint($large) {
       display: none;
+      margin-top: 10px;
+      margin-bottom: 20px;
     }
   }
 }
