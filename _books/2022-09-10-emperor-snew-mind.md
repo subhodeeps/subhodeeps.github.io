@@ -5,6 +5,7 @@ cover : "61gP3Uw949L.jpeg"
 title: "The Emperor's New Mind: Concerning Computers, Minds and The Laws of Physics"
 author: Roger Penrose
 year: 1989
+status: Reading
 
 ---
 

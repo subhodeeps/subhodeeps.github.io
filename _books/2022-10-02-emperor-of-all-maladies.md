@@ -5,7 +5,7 @@ cover : "81y3d1WlglL.jpeg"
 title: "The Emperor of All Maladies: A Biography of Cancer"
 author:  Siddhartha Mukherjee
 year: 2010
-
+status: Reading
 ---
 
 **Still Reading;**

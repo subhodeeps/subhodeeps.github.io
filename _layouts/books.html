@@ -22,19 +22,51 @@ layout: standalone
      {% endif %}
 
         <figure class="book-cover">
+
+        <a href="{{ book.url | relative_url }}">
+
         {% if book.cover %}
-        <a href="{{ book.url | relative_url }}">
+
         <img alt="{{ book.title }} cover" src="{{ book.baseurl }}/images/covers/{{ book.cover }}" style="height:200px" />
-        </a>
+
         {% elsif book.olid %}
-        <a href="{{ book.url | relative_url }}">
+
         <img alt="{{ book.title }} cover" src="http://covers.openlibrary.org/b/olid/{{ book.olid }}-L.jpg?default=false" style="height:200px" />
-        </a>
+
         {% elsif book.isbn %}
-        <a href="{{ book.url | relative_url }}">
+
         <img alt="{{ book.title }} cover" src="http://covers.openlibrary.org/b/isbn/{{ book.isbn }}-L.jpg?default=false" style="height:200px" />
-        </a>
+
         {% endif %}
+
+        {% if book.status %}
+          {% assign status = book.status | upcase %}
+
+          {% if status  == "READING" %}
+
+            <figcaption class="reading">{{ status }}</figcaption>
+
+          {% elsif status  == "FINISHED" %}
+
+             <figcaption class = "finished">{{ status }}</figcaption>
+
+          {% elsif status  == "QUEUED" %}
+
+             <figcaption class = "queued">{{ status }}</figcaption>
+
+          {% elsif status  == "ABANDONED" %}
+
+            <figcaption class="abandoned">{{ status }}</figcaption>
+
+            {% elsif status  == "INTERESTED" %}
+
+              <figcaption class="interested">{{ status }}</figcaption>
+
+
+        {% endif %}
+
+        {% endif %}
+        </a>
         </figure>
 
 
@@ -51,10 +83,51 @@ layout: standalone
     margin: 8px; /* adjust as needed */
 
   }
+
   figure img {
-    vertical-align: top;
+    vertical-align: bottom;
 
   }
 
+  .reading{
+    font-family: monospace;
+    color: #23212D;
+    text-transform: uppercase;
+    background-color: #f89406;
+
+  }
+
+  .finished{
+    font-family: monospace;
+    color: #23212D;
+    text-transform: uppercase;
+    background-color: #62c462;
+
+  }
+
+
+  .queued{
+    font-family: monospace;
+    color: #23212D;
+    text-transform: uppercase;
+    background-color: #81549c;
+
+  }
+
+  .abandoned{
+    font-family: monospace;
+    color: #23212D;
+    text-transform: uppercase;
+    background-color: #ee5f5b;
+
+  }
+
+  .interested{
+    font-family: monospace;
+    color: #23212D;
+    text-transform: uppercase;
+    background-color: #5b59c9;
+
+  }
   }
 </style>

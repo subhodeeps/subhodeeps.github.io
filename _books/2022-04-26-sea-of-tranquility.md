@@ -5,6 +5,8 @@ olid: OL32997935M
 title: "Sea of Tranquility: A novel"
 author: Emily St. John Mandel
 year: 2022
+status: Finished
+
 
 ---
 

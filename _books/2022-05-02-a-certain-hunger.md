@@ -5,6 +5,7 @@ olid: OL35401369M
 title: "A Certain Hunger"
 author: Chelsea G. Summers
 year: 2020
+status: Finished
 ---
 
 > I could never be a mass murderer. Mass murder is gauche. Mass murder is to serial killing as McDonald’s is to Peter Luger. Both establishments serve chopped beef, but one is indiscriminate to the point of ubiquity whereas the other is carnal dining at its bespoke finest.

@@ -5,6 +5,7 @@ cover : "thesecrethistory.jpeg"
 title: "The Secret History"
 author: Donna Tartt
 year: 1993
+status: Reading
 
 ---
 **Still Reading**

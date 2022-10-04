@@ -5,6 +5,7 @@ cover : "9780099448761.jpeg"
 title: "Dance Dance Dance"
 author: Haruki Murakami
 year: 2003
+status: Finished
 
 ---
 
