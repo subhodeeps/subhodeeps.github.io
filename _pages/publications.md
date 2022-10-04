@@ -1,5 +1,10 @@
 ---
 title: "Research and Publications"
+header:
+  overlay_image: header_dark.png
+  overlay_filter: 0.6
+excerpt: ">I was born not knowing and have had only a little time to change that here and there.
+-- Richard Feynman, Letter to Armando Garcia J, December 11, 1985 (Perfectly Reasonable Deviations from the Beaten Track, p. 396)"  
 permalink: /publications/
 author_profile: true
 ---

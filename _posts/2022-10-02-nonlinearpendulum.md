@@ -4,7 +4,7 @@ mathjax: true
 date:   2022-10-02
 permalink: /posts/2022/10/nonlinear_dynamics/
 tags:
-  - onlinear_dynamics
+  - nonlinear_dynamics
   - category1
   - category2
 ---

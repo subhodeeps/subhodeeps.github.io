@@ -1,0 +1,60 @@
+---
+layout: standalone
+---
+
+{{ content }}
+
+{% assign books=site.books %}
+
+
+{% if books.size > 0 %}
+
+    <h2 class="post-list-heading">{{ book.list_title | default: "Stuff I've Been Reading" }}</h2>
+
+    {% for book in books reversed %}
+      {% assign currentdate = book.date | date: "%Y" %}
+      {% if currentdate != date %}
+      {% unless forloop.first %}</ul>{% endunless %}
+       <h1 id="y{{book.date | date: "%Y"}}">{{ currentdate }}</h1>
+
+     <ul>
+     {% assign date = currentdate %}
+     {% endif %}
+
+        <figure class="book-cover">
+        {% if book.cover %}
+        <a href="{{ book.url | relative_url }}">
+        <img alt="{{ book.title }} cover" src="{{ book.baseurl }}/images/covers/{{ book.cover }}" style="height:200px" />
+        </a>
+        {% elsif book.olid %}
+        <a href="{{ book.url | relative_url }}">
+        <img alt="{{ book.title }} cover" src="http://covers.openlibrary.org/b/olid/{{ book.olid }}-L.jpg?default=false" style="height:200px" />
+        </a>
+        {% elsif book.isbn %}
+        <a href="{{ book.url | relative_url }}">
+        <img alt="{{ book.title }} cover" src="http://covers.openlibrary.org/b/isbn/{{ book.isbn }}-L.jpg?default=false" style="height:200px" />
+        </a>
+        {% endif %}
+        </figure>
+
+
+  {% if forloop.last %}</ul>{% endif %}
+{% endfor %}
+
+
+{% endif %}
+
+<style>
+  figure {
+    display: inline-block;
+    text-align: center;
+    margin: 8px; /* adjust as needed */
+
+  }
+  figure img {
+    vertical-align: top;
+
+  }
+
+  }
+</style>

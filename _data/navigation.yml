@@ -6,6 +6,8 @@ main:
     url: /publications/
   - title: "Teaching"
     url: /teaching/
+  - title: "My Bookshelf"
+    url: /books/
   - title: "Blog"
     #url: /blog/
     url: /year-archive/

@@ -87,7 +87,7 @@ author:
   employer         : #"https://www.iiita.ac.in/"
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=WpYbE3oAAAAJ&hl=en"
-  email            : "subhodeep[dot]sarkar1[at]gmail[dot]com"
+  email            : "subhodeep.sarkar1@gmail.com"
   inspire          : "https://inspirehep.net/authors/1797180?ui-citation-summary=true&ui-exclude-self-citations=true"
   arXiv            : "https://arxiv.org/a/sarkar_s_11.html"
   orcid            : "https://orcid.org/0000-0001-9015-8837"
@@ -105,7 +105,7 @@ author:
   github           : "subhodeeps"
   google_plus      :
   keybase          :
-  instagram        : 
+  instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
   linkedin         : "subhodeeps/"
@@ -192,7 +192,9 @@ collections:
   talks:
     output: true
     permalink: /:collection/:path/
-
+  books:
+    output: true
+    permalink: /:collection/:title/
 
 # Defaults
 defaults:
@@ -249,6 +251,7 @@ defaults:
       layout: talk
       author_profile: true
       share: true
+
 
 # Sass/SCSS
 sass:

@@ -1,0 +1,38 @@
+---
+layout: standalone
+author_profile: true
+---
+{% include base_path %}
+
+    <figure class="book-cover">
+    {% if page.cover %}
+    <img alt="{{ page.title }} cover" src="{{ site.baseurl }}/images/covers/{{ page.cover }}" style="width:300px" />
+    <figcaption>Cover of <em>{{ page.title }}</em></figcaption>
+    {% elsif page.olid %}
+    <img alt="{{ page.title }} cover" src="http://covers.openlibrary.org/b/olid/{{ page.olid }}-L.jpg?default=false" style="width:300px" />
+    <figcaption>Cover of <em>{{ page.title }}</em> on the <a href="https://openlibrary.org/olid/{{ page.olid }}">Open Library</a>.</figcaption>
+    {% elsif page.isbn %}
+    <img alt="{{ page.title }} cover" src="http://covers.openlibrary.org/b/isbn/{{ page.isbn }}-L.jpg?default=false" style="width:300px" />
+    <figcaption>Cover of <em>{{ page.title }}</em> on the <a href="https://openlibrary.org/isbn/{{ page.isbn }}">Open Library</a>.</figcaption>
+    {% endif %}
+    </figure>
+
+    <style>
+    figure {
+      float: right;
+        display: table; /* in-line block; */
+      /*  border: 1px dotted gray; */
+        margin: 25px;  /* adjust as needed */
+    }
+    figure img {
+        vertical-align: top;
+    }
+    figure figcaption {
+      /*  border: 1px dotted blue; */
+      display: table-caption;
+      caption-side: bottom;
+      text-align: center;
+    }
+  </style>
+
+  {{ content }}
