@@ -6,12 +6,11 @@ layout: standalone
 
 {% assign books=site.books %}
 
+<h2>{{page.list_title | default: "Books" }}</h2>
 
 {% if books.size > 0 %}
 
-    <h2 class="post-list-heading">{{ book.list_title | default: "Stuff I've Been Reading" }}</h2>
-
-    {% for book in books reversed %}
+  {% for book in books reversed %}
       {% assign currentdate = book.date | date: "%Y" %}
       {% if currentdate != date %}
       {% unless forloop.first %}</ul>{% endunless %}

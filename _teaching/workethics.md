@@ -42,9 +42,9 @@ This page has been adapted from the [Essential Skills](https://blackholes.tecnic
 - **Lastly**, some words from the wise,
 
    - > "The pursuit of science has often been compared to the scaling of mountains, high and not so high. But who amongst us can hope, even in imagination, to scale the Everest and reach its summit when the sky is blue and the air is still, and in the stillness of the air survey the entire Himalayan range in the dazzling white of the snow stretching to infinity? None of us can hope for a comparable vision of nature and of the universe around us. But there is nothing mean or lowly in standing in the valley below and awaiting the sun to rise over Kanchenjunga."
-        -- Subrahmanyan Chandrasekhar, Truth and Beauty: Aesthetics and Motivations in Science (1987), 26.
+      <br/>  -- Subrahmanyan Chandrasekhar, Truth and Beauty: Aesthetics and Motivations in Science (1987), 26.
    - > "Do not undertake a scientific career in quest of fame or money. There are easier and better ways to reach them. Undertake it only if nothing else will satisfy you; for nothing else is probably what you will receive. Your reward will be the widening of the horizon as you climb. And if you achieve that reward you will ask no other."
-         -- Cecilia Payne-Gaposchkin, as quoted by Donovan Moore in What Stars Are Made Of: The Life of
+        <br/> -- Cecilia Payne-Gaposchkin, as quoted by Donovan Moore in What Stars Are Made Of: The Life of
 Cecilia Payne-Gaposchkin (2020), 253.
 
 - **Fin.** If you are still reading, live long and prosper, friend! &#128406;
