@@ -17,15 +17,22 @@ author_profile: true
     {% endif %}
     </figure>
 
+    <br class="mobile-break" clear="right"/>
+
     <style>
     figure {
       float: right;
         display: table; /* in-line block; */
       /*  border: 1px dotted gray; */
         margin: 25px;  /* adjust as needed */
+
     }
     figure img {
-        vertical-align: top;
+         vertical-align: top;
+         display: block;
+         margin-right: auto;
+         margin-left: auto;
+
     }
     figure figcaption {
       /*  border: 1px dotted blue; */
@@ -33,8 +40,21 @@ author_profile: true
       caption-side: bottom;
       text-align: center;
     }
+
+    @media screen and (min-width: 675px)  {
+      .float {
+        float:none;
+    }
+       .mobile-break { display: none; }
+
+    
+
+
+   }
   </style>
 
-  <br clear="left"/>
+
+
+
 
   {{ content }}
