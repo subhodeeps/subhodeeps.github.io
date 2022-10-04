@@ -4,57 +4,75 @@ author_profile: true
 ---
 {% include base_path %}
 
-    <figure class="book-cover">
+
+    <figure>
     {% if page.cover %}
-    <img alt="{{ page.title }} cover" src="{{ site.baseurl }}/images/covers/{{ page.cover }}" style="width:300px" />
+    <img alt="{{ page.title }} cover" src="{{ site.baseurl }}/images/covers/{{ page.cover }}" />
     <figcaption>Cover of <em>{{ page.title }}</em></figcaption>
     {% elsif page.olid %}
-    <img alt="{{ page.title }} cover" src="http://covers.openlibrary.org/b/olid/{{ page.olid }}-L.jpg?default=false" style="width:300px" />
+    <img  alt="{{ page.title }} cover" src="http://covers.openlibrary.org/b/olid/{{ page.olid }}-L.jpg?default=false"/>
     <figcaption>Cover of <em>{{ page.title }}</em> on the <a href="https://openlibrary.org/olid/{{ page.olid }}">Open Library</a>.</figcaption>
     {% elsif page.isbn %}
-    <img alt="{{ page.title }} cover" src="http://covers.openlibrary.org/b/isbn/{{ page.isbn }}-L.jpg?default=false" style="width:300px" />
+    <img alt="{{ page.title }} cover" src="http://covers.openlibrary.org/b/isbn/{{ page.isbn }}-L.jpg?default=false"/>
     <figcaption>Cover of <em>{{ page.title }}</em> on the <a href="https://openlibrary.org/isbn/{{ page.isbn }}">Open Library</a>.</figcaption>
     {% endif %}
     </figure>
 
     <br class="mobile-break" clear="right"/>
 
+    {{ content }}
+
     <style>
     figure {
-      float: right;
-        display: table; /* in-line block; */
-      /*  border: 1px dotted gray; */
-        margin: 25px;  /* adjust as needed */
+      float: none;
+      width:250px;
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
 
     }
-    figure img {
+    figure  img {
+
          vertical-align: top;
          display: block;
-         margin-right: auto;
-         margin-left: auto;
+         margin-right: 5px;
+         margin-left: 5px;
 
     }
     figure figcaption {
-      /*  border: 1px dotted blue; */
-      display: table-caption;
+
+      display: block;
       caption-side: bottom;
       text-align: center;
     }
 
-    @media screen and (min-width: 675px)  {
-      .float {
-        float:none;
-    }
-       .mobile-break { display: none; }
-
-    
+    @media screen and (min-width: 600px)  {
 
 
-   }
+        figure {
+
+              float: right;
+              display: table; /* in-line block; */
+           /* border: 1px dotted gray; */
+             margin: 25px;  /* adjust as needed */
+
+               }
+
+        figure > img {
+                width:300px;
+                vertical-align: top;
+                display: block;
+                margin-right: 5px;
+                margin-left: 5px;
+              }
+        figure figcaption {
+                /*  border: 1px dotted blue; */
+                display: table-caption;
+                caption-side: bottom;
+                text-align: center;
+              }
+
+        .mobile-break { display: none; }
+
+
   </style>
-
-
-
-
-
-  {{ content }}
