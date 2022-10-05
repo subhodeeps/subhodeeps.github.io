@@ -39,7 +39,7 @@ layout: standalone
         {% endif %}
 
         {% if book.status %}
-          {% assign status = book.status | upcase %}
+          {% assign status = book.status | upcase | strip %}
 
           {% if status  == "READING" %}
 
@@ -62,9 +62,17 @@ layout: standalone
               <figcaption class="interested">{{ status }}</figcaption>
 
 
-        {% endif %}
+            {% else %}
+
+            <figcaption class="uncategorized"> UNCATEGORIZED </figcaption>
+
 
         {% endif %}
+            {% else %}
+
+            <figcaption class="uncategorized"> UNCATEGORIZED </figcaption>
+
+      {% endif %}
         </a>
         </figure>
 
@@ -109,7 +117,7 @@ layout: standalone
     font-family: monospace;
     color: #23212D;
     text-transform: uppercase;
-    background-color: #81549c;
+    background-color: #9e76b5;
 
   }
 
@@ -125,8 +133,22 @@ layout: standalone
     font-family: monospace;
     color: #23212D;
     text-transform: uppercase;
-    background-color: #5b59c9;
+    background-color: #7691db;
 
   }
+
+  .uncategorized{
+    font-family: monospace;
+    color: #23212D;
+    text-transform: uppercase;
+    background-color: #b0abb3;
+
+  }
+
+  /* mouse over link */
+a:hover {
+  color: #23212D;
+}
+
   }
 </style>
