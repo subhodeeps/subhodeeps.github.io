@@ -23,6 +23,8 @@ author_profile: true
    {% endif %}
    </figure>
 
+   {% assign status = page.status | upcase %}
+   <b> {{status}} </b>
 
     {% else %}
 
@@ -80,6 +82,7 @@ author_profile: true
 
       .empty-review{
         float: left;
+        padding: 0px 20px 0px 0px;
         }
 
 
