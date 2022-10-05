@@ -7,5 +7,3 @@ author:  Daniel Dennett
 year: 1991
 status: queued
 ---
-
-**LOL;**

@@ -7,6 +7,3 @@ author:  Thomas Pynchon
 year: 1973
 status: abandoned
 ---
-
-**LOL;** **LOL;****LOL;** **LOL;****LOL;** **LOL;****LOL;** **LOL;****LOL;** **LOL;****LOL;** **LOL;****LOL;** **LOL;****LOL;** **LOL;****LOL;** **LOL;****LOL;** **LOL;****LOL;** **LOL;****LOL;** **LOL;****LOL;** **LOL;****LOL;**
-**LOL;**

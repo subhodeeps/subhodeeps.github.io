@@ -7,5 +7,3 @@ author:  William Dalrymple
 year: 2006
 status: interested
 ---
-
-**DEFINITELY MAYBE;**

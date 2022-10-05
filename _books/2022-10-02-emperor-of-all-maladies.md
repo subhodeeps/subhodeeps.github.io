@@ -7,5 +7,3 @@ author:  Siddhartha Mukherjee
 year: 2010
 status: Reading
 ---
-
-**Still Reading;**

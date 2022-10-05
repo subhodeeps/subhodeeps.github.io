@@ -8,5 +8,3 @@ year: 1989
 status: Reading
 
 ---
-
-**Still Reading**
