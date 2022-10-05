@@ -4,7 +4,6 @@ author_profile: true
 ---
 {% include base_path %}
 
-
     <figure>
     {% if page.cover %}
     <img alt="{{ page.title }} cover" src="{{ site.baseurl }}/images/covers/{{ page.cover }}" />
@@ -20,6 +19,13 @@ author_profile: true
 
     <br class="mobile-break" clear="right"/>
 
+    <h1> Thoughts on reading <i>{{page.title}}</i> by {{ page.author}}. </h1>
+
+    <i>
+    {% if page.start %} Start Date: {{page.start| date: "%-d %B %Y"}}. {% endif %}
+    {% if page.end %} End Date: {{page.end | date: "%-d %B %Y"}}. {% endif %}
+    </i>
+
     {{ content }}
 
     <style>
@@ -31,12 +37,13 @@ author_profile: true
       margin-left: auto;
 
     }
-    figure  img {
+    figure  > img {
 
          vertical-align: top;
          display: block;
-         margin-right: 5px;
-         margin-left: 5px;
+         margin-right: 0px;
+         margin-left: 0px;
+         padding: 0px;
 
     }
     figure figcaption {
@@ -51,28 +58,64 @@ author_profile: true
 
         figure {
 
-              float: right;
-              display: table; /* in-line block; */
-           /* border: 1px dotted gray; */
-             margin: 25px;  /* adjust as needed */
+              float: left;
+              display: table /* in-line block; */
+              border: 0px; /* 1px dotted gray */
+              margin: 2px 0px 0px 0px;  /* adjust as needed */
+              padding: 0px 20px 0px 0px;
+             /* top right bottom left */
+
 
                }
 
         figure > img {
                 width:300px;
-                vertical-align: top;
+                vertical-align: bottom;
                 display: block;
-                margin-right: 5px;
-                margin-left: 5px;
+                margin-right: 0px;
+                margin-left: 0px;
+                margin-top: 0px
+                marigin-bottom: 0px;
+
+
+
+
               }
         figure figcaption {
-                /*  border: 1px dotted blue; */
-                display: table-caption;
+                /* border: 1px dotted blue; */
+                display: caption; /* block; */
                 caption-side: bottom;
                 text-align: center;
-              }
+
+                }
 
         .mobile-break { display: none; }
+
+/* =Blockquote
+-------------------------------------------------------------- */
+blockquote {
+
+    position: relative;
+    marign: 0px;
+    display: table;
+
+}
+blockquote:before, blockquote:after {
+
+ /* properties to format the block quotes /*
+
+}
+blockquote:before {
+    top: 0;
+    left: 0;
+
+
+}
+blockquote:after {
+    top: 0;
+    right: 0;
+
+}
 
 
   </style>
