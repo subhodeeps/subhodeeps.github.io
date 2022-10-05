@@ -22,7 +22,7 @@ layout: standalone
 
         <figure class="book-cover">
 
-        <a href="{{ book.url | relative_url }}">
+        <a class="booklink" href="{{ book.url | relative_url }}">
 
         {% if book.cover %}
 
@@ -157,8 +157,8 @@ layout: standalone
   }
 
   /* mouse over link */
-a:hover {
-  color: #23212D;
+a.booklink:hover {
+  color: #23212D !important;
 }
 
   }
