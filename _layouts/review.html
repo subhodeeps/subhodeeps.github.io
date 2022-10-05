@@ -4,6 +4,9 @@ author_profile: true
 ---
 {% include base_path %}
 
+    <h1> Thoughts on reading <i>{{page.title}}</i> by {{ page.author}}. </h1>
+
+
     <figure>
     {% if page.cover %}
     <img alt="{{ page.title }} cover" src="{{ site.baseurl }}/images/covers/{{ page.cover }}" />
@@ -19,7 +22,6 @@ author_profile: true
 
     <br class="mobile-break" clear="right"/>
 
-    <h1> Thoughts on reading <i>{{page.title}}</i> by {{ page.author}}. </h1>
 
     <i>
     {% if page.start %} Start Date: {{page.start| date: "%-d %B %Y"}}. {% endif %}
@@ -62,7 +64,7 @@ author_profile: true
               display: table /* in-line block; */
               border: 0px; /* 1px dotted gray */
               margin: 2px 0px 0px 0px;  /* adjust as needed */
-              padding: 0px 20px 0px 0px;
+              padding: 0px 0px 0px 20px;
              /* top right bottom left */
 
 
