@@ -1,52 +1,59 @@
 ---
 title: "The phase portrait of a nonlinear pendulum."
+layout: single
 mathjax: true
 date:   2022-10-02
 permalink: /posts/2022/10/nonlinear_dynamics/
 tags:
-  - nonlinear_dynamics
-  - category1
-  - category2
+  - nonlinear dynamics
+  - phase portrait
+  - classical mechanics
+
 ---
 The motion of a nonlinear pendulum is governed by the well known equation,
 
 $$
-\begin{aligned}
+\begin{align}
 \dfrac{d^2 x}{d t^2} + \sin x = 0 .
-\end{aligned}
+\end{align}
 $$
 
 The above equation is an example of a second-order, nonlinear ordinary differential equation (ODE). We can now introduce the following coordinate,
 
 $$
-\begin{aligned}
+\begin{align}
 y & = \dfrac{d x}{d t},
-\end{aligned}
+\end{align}
 $$
 
-and convered the second order ODE into a system to two first order ODEs, viz.,
+and converted the second order ODE into a system to two first order ODEs, viz.,
 
 $$
-\begin{aligned}
+\begin{align}
 \dot{x} & = y, \\
 \dot{y} & = - \sin x.
-\end{aligned}
+\end{align}
 $$
+
 Here, dot denotes a derivative with respect to time.
 
 We can now introduce a vector $$\vec{S} = x \hat{i} + y \hat{j},$$
 
 and write our $2D$ system as,
 
-$$\dfrac{d \vec{S}}{d t} =
+$$
+\begin{align}
+\dfrac{d \vec{S}}{d t} =
 \begin{bmatrix}
-       S_2 \\
-- \sin S_1
+S_2 \\
+-\sin S_1
 \end{bmatrix}=
 \begin{bmatrix}
-       y \\
-- \sin x
-\end{bmatrix},  $$
+y \\
+-\sin x
+\end{bmatrix},
+\end{align}$$
+
 where $S_i$ is the $i$-th component of $\vec{S}$.
 
 Our task is to analyse the behaviour of this system, and we do that by
@@ -85,10 +92,10 @@ Notice that
 
 Our first order of business is to generate the phase portrait: we have to essentially sketch the vector field
 $$
-\begin{aligned}
+\begin{align}
 \dot{\vec{S}} & = \dot{x} ~ \hat{i} ~ + ~ \dot{y} ~ \hat{j},\\
         & = y ~ \hat{i} ~ - ~ \sin x \hat{j}.
-\end{aligned}
+\end{align}
 $$
 
 To plot a vector field, we need the following two functions:
