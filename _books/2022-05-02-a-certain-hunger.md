@@ -25,4 +25,4 @@ The writing is lucid, dripping with candour and knitted with silken prose. The a
 
 > We talk about love like it's an involuntary act. We fall into love, like a hole, a puddle, an elevator shaft. We never step mindfully into love. Love we seem to think, requires a loss of control; love necessitates that vertiginous giving over to gravity; love wants you to have no choice.
 
-I enjoyed it. But, just as I don't go around asking people to read American Psycho, I would not recommend it to anyone offhand. But then again
+I enjoyed it. But, just as I don't go around asking people to read American Psycho, I would not recommend it to anyone offhand. 
