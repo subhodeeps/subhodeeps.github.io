@@ -12,12 +12,16 @@ layout: standalone
 
   {% for book in books reversed %}
       {% assign currentdate = book.date | date: "%Y" %}
+
       {% if currentdate != date %}
+
       {% unless forloop.first %}</ul>{% endunless %}
        <h1 id="y{{book.date | date: "%Y"}}">{{ currentdate }}</h1>
 
      <ul>
+
      {% assign date = currentdate %}
+
      {% endif %}
 
         <figure class="book-cover">
@@ -39,6 +43,7 @@ layout: standalone
         {% endif %}
 
         {% if book.status %}
+
           {% assign status = book.status | upcase | strip %}
 
           {% if status  == "READING" %}
@@ -57,35 +62,37 @@ layout: standalone
 
             <figcaption class="abandoned">{{ status }}</figcaption>
 
-            {% elsif status  == "INTERESTED" %}
+          {% elsif status  == "INTERESTED" %}
 
-              <figcaption class="interested">{{ status }}</figcaption>
+            <figcaption class="interested">{{ status }}</figcaption>
 
-              {% elsif status  == "PAUSED" %}
+          {% elsif status  == "REREAD" %}
 
-                <figcaption class="paused">{{ status }}</figcaption>
+            <figcaption class="reread">{{ status }}</figcaption>
 
+          {% elsif status  == "PAUSED" %}
 
-            {% else %}
+            <figcaption class="paused">{{ status }}</figcaption>
+
+          {% else %}
 
             <figcaption class="uncategorized"> UNCATEGORIZED </figcaption>
-
 
         {% endif %}
-            {% else %}
+
+        {% else %}
 
             <figcaption class="uncategorized"> UNCATEGORIZED </figcaption>
 
-      {% endif %}
-        </a>
-        </figure>
+       {% endif %}
+      </a>
+      </figure>
 
 
   {% if forloop.last %}</ul>{% endif %}
-{% endfor %}
-
-
-{% endif %}
+  {% endfor %}
+  {% endif %}
+  
 
 <style>
   figure {
@@ -140,6 +147,15 @@ layout: standalone
     background-color: #7691db;
 
   }
+
+  .reread{
+    font-family: monospace;
+    color: #23212D;
+    text-transform: uppercase;
+    background-color: #a6517d;
+
+  }
+
   .paused{
     font-family: monospace;
     color: #23212D;

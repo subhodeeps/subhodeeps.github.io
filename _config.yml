@@ -81,20 +81,20 @@ analytics:
 # Site Author
 author:
   name             : "Subhodeep Sarkar"
-  avatar           : "cv2.jpg"
+  avatar           : "avatar.jpg"
   bio              : "Ph.D. Scholar (Physics), Indian Institute of Information Technology, Allahabad"
-  location         : "India"
+  location         : #"India"
   employer         : #"https://www.iiita.ac.in/"
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=WpYbE3oAAAAJ&hl=en"
   email            : "subhodeep.sarkar1@gmail.com"
   inspire          : "https://inspirehep.net/authors/1797180?ui-citation-summary=true&ui-exclude-self-citations=true"
-  arXiv            : "https://arxiv.org/a/sarkar_s_11.html"
-  orcid            : "https://orcid.org/0000-0001-9015-8837"
+  arXiv            : #"https://arxiv.org/a/sarkar_s_11.html"
+  orcid            : #"https://orcid.org/0000-0001-9015-8837"
   semanticscholar  : "https://www.semanticscholar.org/author/Subhodeep-Sarkar/9729924"
   researchgate     : "https://www.researchgate.net/profile/Subhodeep_Sarkar"
-  reseacherid      : "https://www.webofscience.com/wos/author/rid/ABE-9289-2020"
-  scopus           : "https://www.scopus.com/authid/detail.uri?authorId=57217449946"
+  reseacherid      : #"https://www.webofscience.com/wos/author/rid/ABE-9289-2020"
+  scopus           : #"https://www.scopus.com/authid/detail.uri?authorId=57217449946"
   uri              :
   bitbucket        :
   codepen          :
@@ -108,7 +108,7 @@ author:
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : "subhodeeps/"
+  linkedin         : #"subhodeeps"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
