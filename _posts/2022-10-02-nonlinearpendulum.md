@@ -10,6 +10,9 @@ tags:
   - classical mechanics
 
 ---
+
+## DRAFT VERSION: WILL MOVE THIS TO MEDIUM.COM ONCE FINISHED
+
 The motion of a nonlinear pendulum is governed by the well known equation,
 
 $$

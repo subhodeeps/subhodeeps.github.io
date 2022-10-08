@@ -7,3 +7,9 @@ cover: "candp.jpeg"
 year: 1866
 status: "reread"
 ---
+# Heading 
+
+- item 1 
+- item 2
+
+$$ E = mc^2 $$
