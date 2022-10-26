@@ -209,7 +209,11 @@ sns.set(rc={'axes.facecolor': '#252a34','figure.facecolor':'#252a34'})
 {% endhighlight %}
 
 
+<<<<<<< HEAD
 ```
+=======
+
+>>>>>>> parent of 884b68b (edited syntax [ci skip])
 {% highlight python linenos %}
 def plotarrows(xs, ys):
     s = int((xs.size)/100)
@@ -222,7 +226,11 @@ def plotarrows(xs, ys):
         ax.arrow(xs[i], ys[i], dx, dy,
                   shape='full', lw=0, length_includes_head=True, head_width=.06, color='#ee5f5b')
 {% endhighlight %}
+<<<<<<< HEAD
 ```
+=======
+
+>>>>>>> parent of 884b68b (edited syntax [ci skip])
 
 We now put everything togather.
 
