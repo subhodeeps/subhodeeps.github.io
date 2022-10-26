@@ -76,7 +76,8 @@ import numpy as np
 from scipy.integrate import odeint
 import matplotlib.pyplot as plt
 import seaborn as sns
-sns.set_style("darkgrid")
+sns
+.set_style("darkgrid")
 ```
 {% endhighlight %}
 
