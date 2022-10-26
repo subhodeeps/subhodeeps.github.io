@@ -8,7 +8,7 @@ tags:
   - nonlinear dynamics
   - phase portrait
   - classical mechanics
-excerpt: "In this post, we will talk about how solve nonlinear differential equations numerically in python and learn how to plot its phase portrait using the nonlinear pendulum as a model."
+excerpt: "In this post, we will talk about how a solve nonlinear differential equation numerically in python and learn how to plot its phase portrait using the nonlinear pendulum as a model."
 ---
 
 ## DRAFT VERSION: Using this as an excuse to test the blog! 
