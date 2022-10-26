@@ -69,23 +69,22 @@ We shall use python to perfrom the above tasks. We begin by importing suitable p
 - `matplotlib` to plot the results
 - `seaborn` to make the graphs look pretty.
 
-
-```python
+{% highlight python linenos %}
 import numpy as np
 from scipy.integrate import odeint
 import matplotlib.pyplot as plt
 import seaborn as sns
 sns.set_style("darkgrid")
-```
+{% endhighlight %}
 
 Our first task is to code up a function that returns the right hand side (RHS) of the system.
 
 
-```python
+{% highlight python linenos %}
 def f(S, t=0):
     x, y = S
     return [y, -np.sin(x)]
-```
+{% endhighlight %}
 
 Notice that
 - our function takes two arguments $S$ and $t$.
@@ -106,7 +105,7 @@ To plot a vector field, we need the following two functions:
 - `matplotlib.pyplt.streamplot` to visualize a vector field by plotting the streamlines of the vector flow.
 
 
-```python
+{% highlight python linenos %}
 fig, ax = plt.subplots(figsize=(40,10))
 
 xmin, xmax = -4.0*np.pi, 4.0*np.pi
@@ -122,7 +121,8 @@ xdot, ydot = f([XX, YY])
 ax.streamplot(XX, YY, xdot, ydot, density = 2)
 
 plt.show()
-```
+{% endhighlight %}
+
 
 
 
@@ -155,8 +155,7 @@ $$ x(0) = 0, ~ y(0) = c, $$
 where $c$ is a constant.
 
 
-
-```python
+{% highlight python linenos %}
 fig, ax = plt.subplots(figsize=(40,10))
 
 t0, tf = 0.0, 45.0
@@ -172,8 +171,8 @@ for y0 in c:
     ax.plot(ys[:,0] , ys[:,1], 'r-')
 
 plt.show()
+{% endhighlight %}
 
-```
 
 
 
@@ -204,13 +203,14 @@ We have used `odeint` to solve our ODEs; the syntax is
 Lastly, I will change some attributes of `seaborn` to change the colour of the plots and define a helper function to plot arrows along the trajectories on the phase space. The detailed working of this function is not important.
 
 
-```python
+{% highlight python linenos %}
 #define seaborn background colors
 sns.set(rc={'axes.facecolor': '#252a34','figure.facecolor':'#252a34'})
-```
+{% endhighlight %}
 
 
-```python
+
+{% highlight python linenos %}
 def plotarrows(xs, ys):
     s = int((xs.size)/100)
     xs = xs.reshape(-1,s)[:,1:].flatten()
@@ -221,8 +221,8 @@ def plotarrows(xs, ys):
         dy = ys[i+1] - ys[i]
         ax.arrow(xs[i], ys[i], dx, dy,
                   shape='full', lw=0, length_includes_head=True, head_width=.06, color='#ee5f5b')
+{% endhighlight %}
 
-```
 
 We now put everything togather.
 
@@ -234,7 +234,7 @@ We now put everything togather.
   - and then plot everything
 
 
-```python
+{% highlight python linenos %}
 fig, ax = plt.subplots(figsize=(40,10))
 
 xmin, xmax = -4.0*np.pi, 4.0*np.pi
@@ -295,8 +295,8 @@ plt.axis('off')
 
 plt.show()
 fig.savefig("header.png", dpi=300)
+{% endhighlight %}
 
-```
 
 
 
