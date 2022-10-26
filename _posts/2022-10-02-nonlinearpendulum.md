@@ -71,14 +71,12 @@ We shall use python to perfrom the above tasks. We begin by importing suitable p
 
 
 {% highlight python linenos %}
-```
 import numpy as np
 from scipy.integrate import odeint
 import matplotlib.pyplot as plt
 import seaborn as sns
 sns
 .set_style("darkgrid")
-```
 {% endhighlight %}
 
 Our first task is to code up a function that returns the right hand side (RHS) of the system.
