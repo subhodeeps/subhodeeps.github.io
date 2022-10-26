@@ -178,6 +178,7 @@ kramdown:
   enable_coderay: false
   highlighter: rouge
   syntax_highlighter_opts:
+    css_class: 'highlight'
     block:
       line_numbers: true
  
