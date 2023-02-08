@@ -2,7 +2,7 @@
 title: "The phase portrait of a nonlinear pendulum."
 layout: single
 mathjax: true
-date:   2022-10-02
+date: 2022-10-02
 permalink: /posts/2022/10/nonlinear_dynamics/
 tags:
   - nonlinear dynamics
@@ -11,7 +11,7 @@ tags:
 excerpt: "In this post, we will talk about how a solve nonlinear differential equation numerically in python and learn how to plot its phase portrait using the nonlinear pendulum as a model."
 ---
 
-## DRAFT VERSION: Using this as an excuse to test the blog! 
+## DRAFT VERSION: Using this as an excuse to test the blog!
 
 The motion of a nonlinear pendulum is governed by the well known equation,
 
@@ -55,20 +55,22 @@ S_2 \\
 y \\
 -\sin x
 \end{bmatrix},
-\end{align}$$
+\end{align}
+$$
 
 where $S_i$ is the $i$-th component of $\vec{S}$.
 
 Our task is to analyse the behaviour of this system, and we do that by
+
 - drawing the phase portrait of the system,
 - solving the system of ODEs numerically.
 
 We shall use python to perfrom the above tasks. We begin by importing suitable python libraries,
+
 - `numpy` to perform manipulations over numeric arrays
 - `scipy.integrate.solve_ivp` to numerically solve our ODEs
 - `matplotlib` to plot the results
 - `seaborn` to make the graphs look pretty.
-
 
 ```python
 import numpy as np
@@ -81,7 +83,6 @@ sns
 
 Our first task is to code up a function that returns the right hand side (RHS) of the system.
 
-
 ```python
 def f(S, t=0):
     x, y = S
@@ -89,12 +90,14 @@ def f(S, t=0):
 ```
 
 Notice that
+
 - our function takes two arguments $S$ and $t$.
 - although our system is autonomous (that is, the RHS is independent of time), we still include the independent variable, this is because our ODE solvers are designed to accept functions which depend on both the variables.
-   - the order of the arguments in the function signature is important, `solve_ivp` expects the independent variable first.
-   - moreover, we set $t$ to take a default value $(0)$, so that can avoid passing a superficial argument while plotting the functions; we keep the $t$ to ensure we can use the same function for numerically solving the ODEs and for plotting the phase portrait.
+  - the order of the arguments in the function signature is important, `solve_ivp` expects the independent variable first.
+  - moreover, we set $t$ to take a default value $(0)$, so that can avoid passing a superficial argument while plotting the functions; we keep the $t$ to ensure we can use the same function for numerically solving the ODEs and for plotting the phase portrait.
 
 Our first order of business is to generate the phase portrait: we have to essentially sketch the vector field
+
 $$
 \begin{align}
 \dot{\vec{S}} & = \dot{x} ~ \hat{i} ~ + ~ \dot{y} ~ \hat{j},\\
@@ -103,9 +106,9 @@ $$
 $$
 
 To plot a vector field, we need the following two functions:
+
 - `numpy.meshgrid` to generate a grid of points (over the 2D plane) where we must calculate the value of the components of the vector field.
 - `matplotlib.pyplt.streamplot` to visualize a vector field by plotting the streamlines of the vector flow.
-
 
 ```python
 fig, ax = plt.subplots(figsize=(40,10))
@@ -125,12 +128,7 @@ ax.streamplot(XX, YY, xdot, ydot, density = 2)
 plt.show()
 ```
 
-
-
-
 ![png](/images/nonlinearpendulum/output_6_0.png)
-
-
 
 In the above code block, we,
 
@@ -156,7 +154,6 @@ Since, we have two differntial equations, we have to provide two initial conditi
 $$ x(0) = 0, ~ y(0) = c, $$
 where $c$ is a constant.
 
-
 ```python
 fig, ax = plt.subplots(figsize=(40,10))
 
@@ -175,11 +172,7 @@ for y0 in c:
 plt.show()
 ```
 
-
-
 ![png](/images/nonlinearpendulum/output_9_0.png)
-
-
 
 In the above code block, we:
 
@@ -199,10 +192,7 @@ We have used `odeint` to solve our ODEs; the syntax is
 
 `odeint` returns a matrix which has $k$ columns, one for each of the $k$ variables, and a row for each time point specified in `t`.
 
-
-
 Lastly, I will change some attributes of `seaborn` to change the colour of the plots and define a helper function to plot arrows along the trajectories on the phase space. The detailed working of this function is not important.
-
 
 ```python
 #define seaborn background colors
@@ -230,7 +220,6 @@ We now put everything together.
   - $x(0)= -5 \pi, y(0)= c ~ \mathrm{where} ~ c \in [1, 2]$
   - $x(0)= 0 \pi, y(0)= c ~ \mathrm{where} ~ c \in (-2, 2)$
   - and then plot everything
-
 
 ```python
 fig, ax = plt.subplots(figsize=(40,10))
@@ -295,12 +284,8 @@ plt.show()
 fig.savefig("header.png", dpi=300)
 ```
 
-
-
-
 ![png](/images/nonlinearpendulum/output_15_0.png)
 
-
-
 ### References:
+
 [1] Nonlinear Dynamics and Chaos, 2nd Ed by Steven Strogatz, CRC Press (2015).
