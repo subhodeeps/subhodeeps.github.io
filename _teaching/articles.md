@@ -1,5 +1,4 @@
 ---
-layout: single
 title: "Some articles, essays, etc. that I've enjoyed reading"
 author_profile: true
 ---
