@@ -36,3 +36,4 @@ gem 'jekyll-scholar'
 gem "kramdown-parser-gfm"
 gem "webrick", "~> 1.8"
 gem "faraday-retry"
+gem "jekyll-include-cache"

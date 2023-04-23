@@ -53,6 +53,8 @@ GEM
       jekyll (>= 3.7, < 5.0)
     jekyll-gist (1.5.0)
       octokit (~> 4.2)
+    jekyll-include-cache (0.2.1)
+      jekyll (>= 3.7, < 5.0)
     jekyll-paginate (1.1.0)
     jekyll-redirect-from (0.16.0)
       jekyll (>= 3.3, < 5.0)
@@ -109,6 +111,7 @@ DEPENDENCIES
   jekyll (~> 4.3)
   jekyll-feed
   jekyll-gist
+  jekyll-include-cache
   jekyll-paginate
   jekyll-redirect-from
   jekyll-scholar

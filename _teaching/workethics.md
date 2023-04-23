@@ -2,6 +2,7 @@
 layout: standalone
 title: "How To Be the Best Version of Yourself"
 author_profile: true
+classes: wide
 ---
 {% include base_path %}
 

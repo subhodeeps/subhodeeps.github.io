@@ -5,6 +5,16 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
+# Theme Settings
+#
+# Review documentation to determine if you should use `theme` or `remote_theme`
+# https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
+
+# theme                  : "minimal-mistakes-jekyll"
+# remote_theme           : "mmistakes/minimal-mistakes"
+
+minimal_mistakes_skin    : dark #"dark" #"default"  #"air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+
 # Site Settings
 locale                   : "en-US"
 title                    : "Subhodeep Sarkar"
@@ -81,7 +91,7 @@ analytics:
 # Site Author
 author:
   name             : "Subhodeep Sarkar"
-  avatar           : "avatar.jpg"
+  avatar           : "/assets/images/avatar.jpg"
   bio              : "Ph.D. Scholar (Physics), Indian Institute of Information Technology, Allahabad"
   location         : #"India"
   employer         : #"https://www.iiita.ac.in/"
@@ -157,11 +167,15 @@ keep_files:
 encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
+
 # Conversion
 markdown: kramdown
+kramdown:
+  math_engine: mathjax
+  
 highlighter: rouge
 lsi: false
-excerpt_separator: "\n\n"
+excerpt_separator: "\n\n" #"<!--more-->"
 incremental: false
 
 
@@ -179,6 +193,12 @@ kramdown:
     block:
       line_numbers: true
  
+ # Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+
+
 # Collections
 collections:
   teaching:
@@ -254,12 +274,6 @@ defaults:
       share: true
 
 
-# Sass/SCSS
-sass:
-  sass_dir: _sass
-  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
-
-
 # Outputting
 permalink: /:categories/:title/
 # paginate: 10 # amount of posts to show
@@ -274,8 +288,9 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-redirect-from
-  - jekyll-scholar
+  - jekyll/scholar
   - kramdown-parser-gfm
+  - jekyll-include-cache
 # mimic GitHub Pages with --safe
 whitelist:
   - jekyll-paginate
@@ -283,7 +298,8 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jemoji
-  - jekyll-scholar
+  - jekyll/scholar
+  - jekyll-include-cache
 
 
 
@@ -326,8 +342,27 @@ compress_html:
 # Jekyll Scholar
 scholar:
   style: custom
-  source: _bibliography
+  locale: en
   bibliography_list_tag: p
   bibliography_item_tag: p
   bibtex_filters:
     - latex
+  sort_by: none
+  order: descending
+
+  source: ./_bibliography
+  bibliography: published.bib
+  # bibliography_template: bibtemplate 
+
+  replace_strings: true
+  join_strings:    true
+
+  details_dir:    bibliography
+  details_layout: bibtex.html
+  details_link:   Details
+
+  repository: /publications
+  repository_file_delimiter: "." 
+  
+  query: "@*"  
+

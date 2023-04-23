@@ -4,11 +4,12 @@ title: "Subhodeep's Homepage"
 excerpt: ">We are just an advanced breed of monkeys on a minor planet of a very average star. But we can understand the universe. That makes us something very special. <br/> -- Stephen Hawking (Der Spiegel, 16 Oct 1988)"
 author_profile: true
 header:
-  overlay_image: header_dark.png
+  overlay_image: assets/images/header_dark.png
   overlay_filter: 0.6
 redirect_from:
   - /about/
   - /about.html
+classes: wide
 ---
 
 Hey! I am Subhodeep, a Ph.D. student at the Indian Institute of Information Technology, Allahabad. I'm working under the supervision of [Dr. Srijit Bhattacharjee](http://profile.iiita.ac.in/srijit/). I am also engaged as a research fellow at the Centre for Theoretical Physics, Jamia Millia Islamia under the mentorship of [Prof. Anjan Ananda Sen](https://www.ctp-jamia.res.in/people/aasen.html). My broad area of interest is *gravitational and black hole physics* with an emphasis on the internal structure of black holes, quasinormal modes, gravitational lensing and black hole shadows. In simple terms, I use theoretical and computational tools to probe classical and quantum aspects of black holes and try to understand what they can say about the nature of reality. I am also interested in the prospect of doing fundamental physics with gravitational waves. To know more about my work, please check out my publications.

@@ -1,0 +1,37 @@
+<!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+{% if author.inspire %}
+<li>
+  <a href="{{ author.inspire }}" itemprop="sameAs" rel="nofollow noopener noreferrer me"><i class="ai ai-inspire-square ai-fw" aria-hidden="true"></i> 
+    iNSPIRE</a>
+</li>
+{% endif %}
+
+{% if author.arXiv %}
+<li><a href="{{ author.arXiv }}"><i class="ai ai-arxiv-square ai-fw"></i> arXiv</a></li>
+{% endif %}
+{% if author.googlescholar %}
+ <li><a href="{{ author.googlescholar }}"><i class="ai ai-google-scholar-square ai-fw"></i> Google Scholar</a></li>
+{% endif %}
+{% if author.semanticscholar %}
+<li><a href="{{ author.semanticscholar }}"><i class="ai ai-semantic-scholar-square ai-fw"></i> Semantic Scholar</a></li>
+{% endif %}
+{% if author.reseacherid %}
+<li><a href="{{ author.reseacherid }}"><i class="ai ai-researcherid-square ai-fw"></i> ReseacherID</a></li>
+{% endif %}
+{% if author.researchgate %}
+<li><a href="{{ author.researchgate }}" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+  <i class="ai ai-researchgate-square ai-fw" aria-hidden="true"></i> ResearchGate</a></li>
+{% endif %}
+{% if author.scopus %}
+<li><a href="{{ author.scopus }}"><i class="ai ai-scopus-square ai-fw"></i> Scopus</a></li>
+{% endif %}
+{% if author.orcid %}
+<li><a href="{{ author.orcid }}"><i class="ai ai-orcid-square ai-fw"></i> ORCID</a></li>
+{% endif %}
+

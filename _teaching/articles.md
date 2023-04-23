@@ -2,6 +2,7 @@
 layout: standalone
 title: "Some articles, essays, etc. that I've enjoyed reading"
 author_profile: true
+classes: wide
 ---
 {% include base_path %}
 

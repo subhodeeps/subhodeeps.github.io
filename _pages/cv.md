@@ -1,13 +1,14 @@
 ---
 title: "Curriculum Vitae"
 header:
-  overlay_image: header_dark.png
+  overlay_image: assets/images/header_dark.png
   overlay_filter: 0.6
 excerpt: ">I pruned a tree once, so technically I'm allowed to put 'branch manager' on my résumé."  
 permalink: /cv/
 author_profile: true
 redirect_from:
   - /resume
+classes: wide
 ---
 
 {% include base_path %}
