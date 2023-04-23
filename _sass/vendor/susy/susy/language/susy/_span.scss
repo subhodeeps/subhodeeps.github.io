@@ -153,7 +153,7 @@
     @if $_math == static {
       $width: $span-sum * valid-column-math($_math, $_column-width);
     } @else {
-      $width: percentage($span-sum / $context);
+      $width: percentage(calc($span-sum / $context));
     }
   } @else {
     $width: $n;
