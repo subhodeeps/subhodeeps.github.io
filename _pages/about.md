@@ -17,8 +17,7 @@ My interest in physics and mathematics are however wide-ranging; beyond my gradu
 
 I also enjoy meeting and collaborating with new people. So, please feel free to get in touch if you would like to discuss and study some of the broad topics that I've mentioned!
 
-Update:
--------
+## Update
 
 - **13 Apr 2023:** The preprint of our latest work, [*Perturbing the perturbed: Stability of quasi-normal modes in presence of a positive cosmological constant*](https://arxiv.org/abs/2304.06829) is now available on the arXiv.
 - **08 Feb 2023:** I have joined the [*Centre for Theoretical Physics, Jamia Millia Islamia (Central University)*](https://www.ctp-jamia.res.in/) as a Project Fellow in a DST-SERB project under Prof. Anjan Ananda Sen.
