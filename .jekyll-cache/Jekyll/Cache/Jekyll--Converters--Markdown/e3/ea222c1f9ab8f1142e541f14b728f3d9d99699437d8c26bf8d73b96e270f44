@@ -1,0 +1,395 @@
+I"ùx<h2 id="draft-version-using-this-as-an-excuse-to-test-the-blog">DRAFT VERSION: Using this as an excuse to test the blog!</h2>
+
+<p>The motion of a nonlinear pendulum is governed by the well known equation,</p>
+
+\[\begin{align}
+\dfrac{d^2 x}{d t^2} + \sin x = 0 .
+\end{align}\]
+
+<p>The above equation is an example of a second-order, nonlinear ordinary differential equation (ODE). We can now introduce the following coordinate,</p>
+
+\[\begin{align}
+y &amp; = \dfrac{d x}{d t},
+\end{align}\]
+
+<p>and converted the second order ODE into a system to two first order ODEs, viz.,</p>
+
+\[\begin{align}
+\dot{x} &amp; = y, \\
+\dot{y} &amp; = - \sin x.
+\end{align}\]
+
+<p>Here, dot denotes a derivative with respect to time.</p>
+
+<p>We can now introduce a vector \(\vec{S} = x \hat{i} + y \hat{j},\)</p>
+
+<p>and write our $2D$ system as,</p>
+
+\[\begin{align}
+\dfrac{d \vec{S}}{d t} =
+\begin{bmatrix}
+S_2 \\
+-\sin S_1
+\end{bmatrix}=
+\begin{bmatrix}
+y \\
+-\sin x
+\end{bmatrix},
+\end{align}\]
+
+<p>where $S_i$ is the $i$-th component of $\vec{S}$.</p>
+
+<p>Our task is to analyse the behaviour of this system, and we do that by</p>
+
+<ul>
+  <li>drawing the phase portrait of the system,</li>
+  <li>solving the system of ODEs numerically.</li>
+</ul>
+
+<p>We shall use python to perfrom the above tasks. We begin by importing suitable python libraries,</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">numpy</code> to perform manipulations over numeric arrays</li>
+  <li><code class="language-plaintext highlighter-rouge">scipy.integrate.solve_ivp</code> to numerically solve our ODEs</li>
+  <li><code class="language-plaintext highlighter-rouge">matplotlib</code> to plot the results</li>
+  <li><code class="language-plaintext highlighter-rouge">seaborn</code> to make the graphs look pretty.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">from</span> <span class="n">scipy.integrate</span> <span class="kn">import</span> <span class="n">odeint</span>
+<span class="kn">import</span> <span class="n">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="n">seaborn</span> <span class="k">as</span> <span class="n">sns</span>
+<span class="n">sns</span>
+<span class="p">.</span><span class="nf">set_style</span><span class="p">(</span><span class="s">"darkgrid"</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Our first task is to code up a function that returns the right hand side (RHS) of the system.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">S</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">y</span><span class="p">,</span> <span class="o">-</span><span class="n">np</span><span class="p">.</span><span class="nf">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Notice that</p>
+
+<ul>
+  <li>our function takes two arguments $S$ and $t$.</li>
+  <li>although our system is autonomous (that is, the RHS is independent of time), we still include the independent variable, this is because our ODE solvers are designed to accept functions which depend on both the variables.
+    <ul>
+      <li>the order of the arguments in the function signature is important, <code class="language-plaintext highlighter-rouge">solve_ivp</code> expects the independent variable first.</li>
+      <li>moreover, we set $t$ to take a default value $(0)$, so that can avoid passing a superficial argument while plotting the functions; we keep the $t$ to ensure we can use the same function for numerically solving the ODEs and for plotting the phase portrait.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Our first order of business is to generate the phase portrait: we have to essentially sketch the vector field</p>
+
+\[\begin{align}
+\dot{\vec{S}} &amp; = \dot{x} ~ \hat{i} ~ + ~ \dot{y} ~ \hat{j},\\
+        &amp; = y ~ \hat{i} ~ - ~ \sin x \hat{j}.
+\end{align}\]
+
+<p>To plot a vector field, we need the following two functions:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">numpy.meshgrid</code> to generate a grid of points (over the 2D plane) where we must calculate the value of the components of the vector field.</li>
+  <li><code class="language-plaintext highlighter-rouge">matplotlib.pyplt.streamplot</code> to visualize a vector field by plotting the streamlines of the vector flow.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="rouge-code"><pre><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="nf">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span> <span class="o">=</span> <span class="o">-</span><span class="mf">4.0</span><span class="o">*</span><span class="n">np</span><span class="p">.</span><span class="n">pi</span><span class="p">,</span> <span class="mf">4.0</span><span class="o">*</span><span class="n">np</span><span class="p">.</span><span class="n">pi</span>
+<span class="n">ymin</span><span class="p">,</span> <span class="n">ymax</span> <span class="o">=</span> <span class="o">-</span><span class="mf">3.0</span><span class="p">,</span> <span class="mf">3.0</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">linspace</span><span class="p">(</span><span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">linspace</span><span class="p">(</span><span class="n">ymin</span><span class="p">,</span> <span class="n">ymax</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+
+<span class="n">XX</span> <span class="p">,</span> <span class="n">YY</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="n">xdot</span><span class="p">,</span> <span class="n">ydot</span> <span class="o">=</span> <span class="nf">f</span><span class="p">([</span><span class="n">XX</span><span class="p">,</span> <span class="n">YY</span><span class="p">])</span>
+
+<span class="n">ax</span><span class="p">.</span><span class="nf">streamplot</span><span class="p">(</span><span class="n">XX</span><span class="p">,</span> <span class="n">YY</span><span class="p">,</span> <span class="n">xdot</span><span class="p">,</span> <span class="n">ydot</span><span class="p">,</span> <span class="n">density</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="nf">show</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><img src="/images/nonlinearpendulum/output_6_0.png" alt="png" /></p>
+
+<p>In the above code block, we,</p>
+
+<ul>
+  <li>first set up the figure and axes object (if this looks unfamiliar, <a href="https://stackoverflow.com/a/34162641">check this out</a></li>
+  <li>we then set appropriate ranges for the variables, $x$ and $y$.</li>
+  <li>we use <code class="language-plaintext highlighter-rouge">numpy.linspace</code> to generate 30 points along the $x$ and $y$ axes each.</li>
+  <li>we then use <code class="language-plaintext highlighter-rouge">numpy.meshgrid</code> to obtain two 2D arrays $XX$ and $YY$ that helps us in computing the vector field over the entire $x-y$ plane.</li>
+  <li>we store the values of the components of the vector field in <code class="language-plaintext highlighter-rouge">xdot</code> and <code class="language-plaintext highlighter-rouge">ydot</code>.</li>
+  <li>finally we use <code class="language-plaintext highlighter-rouge">matplotlib.pyplot.streamplot</code> to sketch the vector field.</li>
+</ul>
+
+<p>The primary purpose of using <code class="language-plaintext highlighter-rouge">meshgrid</code> is to avoid using slow python loops. To get a better understanding of how <code class="language-plaintext highlighter-rouge">meshgrid</code> works, <a href="https://stackoverflow.com/questions/36013063/what-is-the-purpose-of-meshgrid-in-python-numpy">check this out</a>.</p>
+
+<p>Notice the line where <code class="language-plaintext highlighter-rouge">streamplot</code> is invoked. The basic syntax is:</p>
+
+<p><code class="language-plaintext highlighter-rouge">ax.streamplot(x_grid,y_grid,x_vec,y_vec, density=spacing)</code></p>
+
+<p>Here <code class="language-plaintext highlighter-rouge">x_grid</code> and <code class="language-plaintext highlighter-rouge">y_grid</code> are arrays of <code class="language-plaintext highlighter-rouge">x</code>, <code class="language-plaintext highlighter-rouge">y</code> points. The arrays <code class="language-plaintext highlighter-rouge">x_vec</code> and <code class="language-plaintext highlighter-rouge">y_vec</code> denote the stream velocity at each point on the grid. The keyword argument <code class="language-plaintext highlighter-rouge">density=spacing</code> specifies how close the streamlines are drawn together.</p>
+
+<p>We shall now use <code class="language-plaintext highlighter-rouge">odeint</code> to numerically solve the $2D$ system.</p>
+
+<p>Since, we have two differntial equations, we have to provide two initial conditions. First, shall try to simulate the case where the bob of the pendulum is initially at rest, and it is set into motion with some initial velocity, that is,</p>
+
+<p>\(x(0) = 0, ~ y(0) = c,\)
+where $c$ is a constant.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="rouge-code"><pre><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="nf">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="n">t0</span><span class="p">,</span> <span class="n">tf</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">45.0</span>
+<span class="n">tspan</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">linspace</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span> <span class="n">tf</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+
+<span class="n">x0</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">y0</span> <span class="ow">in</span> <span class="n">c</span><span class="p">:</span>
+    <span class="n">S0</span> <span class="o">=</span> <span class="p">[</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">]</span>
+    <span class="n">ys</span> <span class="o">=</span> <span class="nf">odeint</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">S0</span><span class="p">,</span> <span class="n">tspan</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span><span class="n">ys</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span> <span class="p">,</span> <span class="n">ys</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="s">'r-'</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="nf">show</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><img src="/images/nonlinearpendulum/output_9_0.png" alt="png" /></p>
+
+<p>In the above code block, we:</p>
+
+<ul>
+  <li>first set up the figure and axes object</li>
+  <li>set up the time interval over which we solve our ODEs</li>
+  <li>provide the first initial condition, $x(0)=0$</li>
+  <li>we then construct an array containing suitable values of $c$ which we shall use to provide the second initial condition</li>
+  <li>we then run a loop that picks up one element after the other from the array containg $c$ and calls the ODE solver with the initial conditions $[0,c]$</li>
+  <li>the solution is stored in ys and then plotted.</li>
+</ul>
+
+<p>We have used <code class="language-plaintext highlighter-rouge">odeint</code> to solve our ODEs; the syntax is
+<code class="language-plaintext highlighter-rouge">ys= odeint(model, initial_values, t)</code> where</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">model</code> is the RHS of the 2D system</li>
+  <li><code class="language-plaintext highlighter-rouge">initial values</code> is an array containing the initial conditions</li>
+  <li><code class="language-plaintext highlighter-rouge">t</code> is an array containing the point on the time axis where the ODEs are solved</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">odeint</code> returns a matrix which has $k$ columns, one for each of the $k$ variables, and a row for each time point specified in <code class="language-plaintext highlighter-rouge">t</code>.</p>
+
+<p>Lastly, I will change some attributes of <code class="language-plaintext highlighter-rouge">seaborn</code> to change the colour of the plots and define a helper function to plot arrows along the trajectories on the phase space. The detailed working of this function is not important.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="c1">#define seaborn background colors
+</span><span class="n">sns</span><span class="p">.</span><span class="nf">set</span><span class="p">(</span><span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s">'axes.facecolor'</span><span class="p">:</span> <span class="s">'#252a34'</span><span class="p">,</span><span class="s">'figure.facecolor'</span><span class="p">:</span><span class="s">'#252a34'</span><span class="p">})</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">plotarrows</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">):</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="nf">int</span><span class="p">((</span><span class="n">xs</span><span class="p">.</span><span class="n">size</span><span class="p">)</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">xs</span> <span class="o">=</span> <span class="n">xs</span><span class="p">.</span><span class="nf">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">s</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">:].</span><span class="nf">flatten</span><span class="p">()</span>
+    <span class="n">ys</span> <span class="o">=</span> <span class="n">ys</span><span class="p">.</span><span class="nf">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">s</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">:].</span><span class="nf">flatten</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">xs</span><span class="p">.</span><span class="n">size</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+        <span class="n">dx</span> <span class="o">=</span> <span class="n">xs</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">xs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">dy</span> <span class="o">=</span> <span class="n">ys</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">ys</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">ax</span><span class="p">.</span><span class="nf">arrow</span><span class="p">(</span><span class="n">xs</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">ys</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dy</span><span class="p">,</span>
+                  <span class="n">shape</span><span class="o">=</span><span class="s">'full'</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">length_includes_head</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">head_width</span><span class="o">=</span><span class="p">.</span><span class="mi">06</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">'#ee5f5b'</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>We now put everything together.</p>
+
+<ul>
+  <li>we sketch the vector field field (that is, draw the phase portrait)</li>
+  <li>we solve the ODEs with the initial conditions
+    <ul>
+      <li>$x(0)= 5 \pi, y(0)= c ~ \mathrm{where} ~ c \in [-2, -1]$</li>
+      <li>$x(0)= -5 \pi, y(0)= c ~ \mathrm{where} ~ c \in [1, 2]$</li>
+      <li>$x(0)= 0 \pi, y(0)= c ~ \mathrm{where} ~ c \in (-2, 2)$</li>
+      <li>and then plot everything</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+</pre></td><td class="rouge-code"><pre><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="nf">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span> <span class="o">=</span> <span class="o">-</span><span class="mf">4.0</span><span class="o">*</span><span class="n">np</span><span class="p">.</span><span class="n">pi</span><span class="p">,</span> <span class="mf">4.0</span><span class="o">*</span><span class="n">np</span><span class="p">.</span><span class="n">pi</span>
+<span class="n">ymin</span><span class="p">,</span> <span class="n">ymax</span> <span class="o">=</span> <span class="o">-</span><span class="mf">3.0</span><span class="p">,</span> <span class="mf">3.0</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">linspace</span><span class="p">(</span><span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">linspace</span><span class="p">(</span><span class="n">ymin</span><span class="p">,</span> <span class="n">ymax</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+
+<span class="n">XX</span> <span class="p">,</span> <span class="n">YY</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="n">xdot</span><span class="p">,</span> <span class="n">ydot</span> <span class="o">=</span> <span class="nf">f</span><span class="p">([</span><span class="n">XX</span><span class="p">,</span> <span class="n">YY</span><span class="p">])</span>
+
+<span class="n">ax</span><span class="p">.</span><span class="nf">streamplot</span><span class="p">(</span><span class="n">XX</span><span class="p">,</span> <span class="n">YY</span><span class="p">,</span> <span class="n">xdot</span><span class="p">,</span> <span class="n">ydot</span><span class="p">,</span> <span class="n">density</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">'#52adc8'</span><span class="p">)</span>
+
+
+<span class="n">t0</span><span class="p">,</span> <span class="n">tf</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">45.0</span>
+<span class="n">tspan</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">linspace</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span> <span class="n">tf</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+
+<span class="n">x0</span> <span class="o">=</span> <span class="mf">5.0</span><span class="o">*</span><span class="n">np</span><span class="p">.</span><span class="n">pi</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">2.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">y0</span> <span class="ow">in</span> <span class="n">c</span><span class="p">:</span>
+    <span class="n">S0</span> <span class="o">=</span> <span class="p">[</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">]</span>
+    <span class="n">ys</span> <span class="o">=</span> <span class="nf">odeint</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">S0</span><span class="p">,</span> <span class="n">tspan</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span><span class="n">ys</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span> <span class="p">,</span> <span class="n">ys</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s">'#ee5f5b'</span><span class="p">)</span>
+    <span class="nf">plotarrows</span><span class="p">(</span><span class="n">ys</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="n">ys</span><span class="p">[:,</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="n">x0</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.0</span><span class="o">*</span><span class="n">np</span><span class="p">.</span><span class="n">pi</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">linspace</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+
+
+
+<span class="k">for</span> <span class="n">y0</span> <span class="ow">in</span> <span class="n">c</span><span class="p">:</span>
+    <span class="n">S0</span> <span class="o">=</span> <span class="p">[</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">]</span>
+    <span class="n">ys</span> <span class="o">=</span> <span class="nf">odeint</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">S0</span><span class="p">,</span> <span class="n">tspan</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span><span class="n">ys</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span> <span class="p">,</span> <span class="n">ys</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s">'#ee5f5b'</span><span class="p">)</span>
+    <span class="nf">plotarrows</span><span class="p">(</span><span class="n">ys</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="n">ys</span><span class="p">[:,</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="n">x0</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">1.95</span><span class="p">,</span> <span class="mf">1.95</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+<span class="n">tspan</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">linspace</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span> <span class="n">tf</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">y0</span> <span class="ow">in</span> <span class="n">c</span><span class="p">:</span>
+    <span class="n">S0</span> <span class="o">=</span> <span class="p">[</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">]</span>
+    <span class="n">ys</span> <span class="o">=</span> <span class="nf">odeint</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">S0</span><span class="p">,</span> <span class="n">tspan</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span><span class="n">ys</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span> <span class="p">,</span> <span class="n">ys</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s">'#ee5f5b'</span><span class="p">)</span>
+    <span class="nf">plotarrows</span><span class="p">(</span><span class="n">ys</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="n">ys</span><span class="p">[:,</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="n">ax</span><span class="p">.</span><span class="nf">set_xlim</span><span class="p">(</span><span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="nf">set_ylim</span><span class="p">(</span><span class="n">ymin</span><span class="p">,</span> <span class="n">ymax</span><span class="p">)</span>
+
+<span class="c1"># uncomment for grid lines but no labels
+# ax.set(yticklabels=[]) # hide y labels
+# ax.set(xticklabels=[]) # hide x labels
+</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">axis</span><span class="p">(</span><span class="s">'off'</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="nf">show</span><span class="p">()</span>
+<span class="n">fig</span><span class="p">.</span><span class="nf">savefig</span><span class="p">(</span><span class="s">"header.png"</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><img src="/images/nonlinearpendulum/output_15_0.png" alt="png" /></p>
+
+<h3 id="references">References:</h3>
+
+<p>[1] Nonlinear Dynamics and Chaos, 2nd Ed by Steven Strogatz, CRC Press (2015).</p>
+:ET
