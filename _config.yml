@@ -339,30 +339,38 @@ compress_html:
   ignore:
     envs: [development, production]
 
+# -----------------------------------------------------------------------------
 # Jekyll Scholar
-scholar:
-  style: custom
-  locale: en
-  bibliography_list_tag: p
-  bibliography_item_tag: p
-  bibtex_filters:
-    - latex
-  sort_by: none
-  order: descending
+# -----------------------------------------------------------------------------
 
-  source: ./_bibliography
-  bibliography: published.bib
-  # bibliography_template: bibtemplate 
+scholar:
+
+  last_name: [Sarkar]
+  first_name: [Subhodeep, S.]
+
+  style: apa
+  locale: en
+
+  source: /_bibliography/
+  bibliography: papers.bib
+  bibliography_template: bibtemplate
+  # Note: if you have latex math in your bibtex, the latex filter
+  # preprocessing may conflict with MathJAX if the latter is enabled.
+  # See https://github.com/alshedivat/al-folio/issues/357.
+  bibtex_filters: [latex, smallcaps, superscript]
 
   replace_strings: true
-  join_strings:    true
+  join_strings: true
 
-  details_dir:    bibliography
+  details_dir: bibliography
   details_layout: bibtex.html
-  details_link:   Details
+  details_link: Details
 
-  repository: /publications
-  repository_file_delimiter: "." 
-  
-  query: "@*"  
+  query: "@*"
 
+# Filter out certain bibtex entry keywords used internally from the bib output
+filtered_bibtex_keywords: [abbr, abstract, arxiv, bibtex_show, html, pdf, selected, supp, blog, code, poster, slides, website, preview, inspire]
+
+# Maximum number of authors to be shown for each publication (more authors are visible on click)
+max_author_limit: 3  # leave blank to always show all authors
+more_authors_animation_delay: 10  # more authors are revealed on click using animation; smaller delay means faster animation
