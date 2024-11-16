@@ -18,13 +18,14 @@ You can find my complete CV [here](/files/CVsubhodeepCTPIIITA.pdf){:target="_bla
 
 ## Employment
 
-* Research Fellow, Centre for Theoretical Physics, Jamia Millia Islamia, New Delhi (Feb 2023 - Present)
+* Postdoctoral Researcher, Centre for Strings, Gravitation and Cosmology, Indian Institute of Technology, Madras (Apr 2024 - Present)
+* Research Fellow, Centre for Theoretical Physics, Jamia Millia Islamia, New Delhi (Feb 2023 - Mar 2024)
 * Senior Research Fellow and Teaching Assistant, Indian Institute of Information Technology, Allahabad (Jul 2021 - Feb 2023)
 * Junior Research Fellow and Teaching Assistant, Indian Institute of Information Technology, Allahabad (Jul 2019 - Jul 2021)
 
 ## Education
 
-* Ph.D in Physics, Indian Institute of Information Technology, Allahabad (let's not jinx it, kthnxbye)
+* Ph.D in Physics, Indian Institute of Information Technology, Allahabad (2024)
 * M.Sc. in Physics, Jamia Millia Islamia (Central University), New Delhi (2018)
 * B.Sc. (Honours) in Physics, University of Calcutta, Kolkata (2016)
 
