@@ -24,8 +24,6 @@ Please visit [my **INSPIRE-HEP** profile](https://inspirehep.net/literature?sort
 
 ## Publications
 
-### Preprints
-
 {% bibliography --file preprint %}
 
 ### Published Papers
