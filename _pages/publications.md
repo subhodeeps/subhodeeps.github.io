@@ -1,8 +1,5 @@
 ---
 title: "Research and Publications"
-header:
-  overlay_image: assets/images/header_dark.png
-  overlay_filter: 0.6
 excerpt: ">I was born not knowing and have had only a little time to change that here and there. <br/>
 -- Richard Feynman, (Perfectly Reasonable Deviations from the Beaten Track, p. 396)"  
 permalink: /publications/

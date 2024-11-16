@@ -4,10 +4,6 @@ title: "My Bookshelf"
 excerpt: " > When I have a little money, I buy books; and if I have any left, I buy food and clothes."
 list_title: Books that I am reading | have read | will read.
 author_profile: true
-header:
-  overlay_image: assets/images/header_dark.png
-  overlay_filter: 0.6
-
 permalink: /books/
 classes: wide
 ---
