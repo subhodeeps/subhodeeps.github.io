@@ -11,8 +11,6 @@ classes: wide
 {% include base_path %}
 You can find my complete CV [here](/files/CVsubhodeepCTPIIITA.pdf){:target="_blank" rel="noopener"}
 
-# Résumé
-
 ## Employment
 
 * Postdoctoral Researcher, Centre for Strings, Gravitation and Cosmology, Indian Institute of Technology, Madras (Apr 2024 - Present)
