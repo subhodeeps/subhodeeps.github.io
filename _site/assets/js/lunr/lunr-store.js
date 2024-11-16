@@ -113,7 +113,7 @@ var store = [{
         "url": "/books/people-in-the-trees/",
         "teaser": null
       },{
-        "title": "Resolve",
+        "title": "The Sleepwalkers",
         "excerpt":" ","categories": [],
         "tags": [],
         "url": "/books/the-sleepwalkers/",
