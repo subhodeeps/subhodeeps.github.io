@@ -101,6 +101,12 @@ var store = [{
         "url": "/books/the-last-mughal/",
         "teaser": null
       },{
+        "title": "Tomb of Sand",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/books/tomb-of-sand/",
+        "teaser": null
+      },{
         "title": "Resolve",
         "excerpt":" ","categories": [],
         "tags": [],
@@ -111,18 +117,6 @@ var store = [{
         "excerpt":" ","categories": [],
         "tags": [],
         "url": "/books/people-in-the-trees/",
-        "teaser": null
-      },{
-        "title": "Resolve",
-        "excerpt":" ","categories": [],
-        "tags": [],
-        "url": "/books/the-sleepwalkers/",
-        "teaser": null
-      },{
-        "title": "Tomb of Sand",
-        "excerpt":" ","categories": [],
-        "tags": [],
-        "url": "/books/tomb-of-sand/",
         "teaser": null
       },{
         "title": "Breast and Eggs",
