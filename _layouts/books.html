@@ -6,176 +6,122 @@ layout: standalone
 
 {% assign books=site.books %}
 
-<h2>{{page.list_title | default: "Books" }}</h2>
+<h2>{{ page.list_title | default: "Books" }}</h2>
 
 {% if books.size > 0 %}
-
   {% for book in books reversed %}
-      {% assign currentdate = book.date | date: "%Y" %}
+    {% assign currentdate = book.date | date: "%Y" %}
 
-      {% if currentdate != date %}
-
+    {% if currentdate != date %}
       {% unless forloop.first %}</ul>{% endunless %}
-       <h1 id="y{{book.date | date: "%Y"}}">{{ currentdate }}</h1>
+      <h1 id="y{{ currentdate }}">{{ currentdate }}</h1>
+      <ul>
+      {% assign date = currentdate %}
+    {% endif %}
 
-     <ul>
-
-     {% assign date = currentdate %}
-
-     {% endif %}
-
-        <figure class="book-cover">
-
+    <li class="container">
+      <figure class="book-cover">
         <a class="booklink" href="{{ book.url | relative_url }}">
-
-        {% if book.cover %}
-
-        <img alt="{{ book.title }} cover" src="{{ book.baseurl }}/images/covers/{{ book.cover }}" style="height:200px" />
-
-        {% elsif book.olid %}
-
-        <img alt="{{ book.title }} cover" src="http://covers.openlibrary.org/b/olid/{{ book.olid }}-L.jpg?default=false" style="height:200px" />
-
-        {% elsif book.isbn %}
-
-        <img alt="{{ book.title }} cover" src="http://covers.openlibrary.org/b/isbn/{{ book.isbn }}-L.jpg?default=false" style="height:200px" />
-
-        {% endif %}
-
-        {% if book.status %}
+          {% if book.cover %}
+            <img 
+              alt="{{ book.title }} cover" 
+              src="{{ book.baseurl }}/images/covers/{{ book.cover }}" 
+            />
+          {% elsif book.olid %}
+            <img 
+              alt="{{ book.title }} cover" 
+              src="http://covers.openlibrary.org/b/olid/{{ book.olid }}-L.jpg?default=false" 
+            />
+          {% elsif book.isbn %}
+            <img 
+              alt="{{ book.title }} cover" 
+              src="http://covers.openlibrary.org/b/isbn/{{ book.isbn }}-L.jpg?default=false" 
+            />
+          {% endif %}
 
           {% assign status = book.status | upcase | strip %}
-
-          {% if status  == "READING" %}
-
-            <figcaption class="reading">{{ status }}</figcaption>
-
-          {% elsif status  == "FINISHED" %}
-
-             <figcaption class = "finished">{{ status }}</figcaption>
-
-          {% elsif status  == "QUEUED" %}
-
-             <figcaption class = "queued">{{ status }}</figcaption>
-
-          {% elsif status  == "ABANDONED" %}
-
-            <figcaption class="abandoned">{{ status }}</figcaption>
-
-          {% elsif status  == "INTERESTED" %}
-
-            <figcaption class="interested">{{ status }}</figcaption>
-
-          {% elsif status  == "REREAD" %}
-
-            <figcaption class="reread">{{ status }}</figcaption>
-
-          {% elsif status  == "PAUSED" %}
-
-            <figcaption class="paused">{{ status }}</figcaption>
-
-          {% else %}
-
-            <figcaption class="uncategorized"> UNCATEGORIZED </figcaption>
-
-        {% endif %}
-
-        {% else %}
-
-            <figcaption class="uncategorized"> UNCATEGORIZED </figcaption>
-
-       {% endif %}
-      </a>
+          <figcaption class="
+            {% case status %}
+              {% when 'READING' %}reading
+              {% when 'FINISHED' %}finished
+              {% when 'QUEUED' %}queued
+              {% when 'ABANDONED' %}abandoned
+              {% when 'INTERESTED' %}interested
+              {% when 'REREAD' %}reread
+              {% when 'PAUSED' %}paused
+              {% else %}uncategorized
+            {% endcase %}
+          ">
+            {{ status | default: 'UNCATEGORIZED' }}
+          </figcaption>
+        </a>
       </figure>
+    </li>
 
-
-  {% if forloop.last %}</ul>{% endif %}
+    {% if forloop.last %}</ul>{% endif %}
   {% endfor %}
-  {% endif %}
-
+{% endif %}
 
 <style>
-  figure {
-    display: inline-block;
-    text-align: center;
-    margin: 8px; /* adjust as needed */
+  ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
 
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+  }
+
+  figure {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    align-items: end;
+    margin: 0;
+    height: 100%;
   }
 
   figure img {
-    vertical-align: bottom;
-
+    max-width: 150px;
+    width: auto;
+    height: auto;
+    align-self: end;
   }
 
-  .reading{
+  figcaption {
     font-family: monospace;
     color: #23212D;
     text-transform: uppercase;
-    background-color: #f89406;
-
+    padding: 4px 8px;
+    margin-top: 4px;
+    width: 150px;
+    box-sizing: border-box;
+    text-align: center;
   }
 
-  .finished{
-    font-family: monospace;
+  .reading { background-color: #f89406; }
+  .finished { background-color: #62c462; }
+  .queued { background-color: #9e76b5; }
+  .abandoned { background-color: #ee5f5b; }
+  .interested { background-color: #7691db; }
+  .reread { background-color: #a6517d; }
+  .paused { background-color: #bdac7e; }
+  .uncategorized { background-color: #b0abb3; }
+
+  .booklink {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .booklink:hover {
     color: #23212D;
-    text-transform: uppercase;
-    background-color: #62c462;
-
-  }
-
-
-  .queued{
-    font-family: monospace;
-    color: #23212D;
-    text-transform: uppercase;
-    background-color: #9e76b5;
-
-  }
-
-  .abandoned{
-    font-family: monospace;
-    color: #23212D;
-    text-transform: uppercase;
-    background-color: #ee5f5b;
-
-  }
-
-  .interested{
-    font-family: monospace;
-    color: #23212D;
-    text-transform: uppercase;
-    background-color: #7691db;
-
-  }
-
-  .reread{
-    font-family: monospace;
-    color: #23212D;
-    text-transform: uppercase;
-    background-color: #a6517d;
-
-  }
-
-  .paused{
-    font-family: monospace;
-    color: #23212D;
-    text-transform: uppercase;
-    background-color: #bdac7e;
-
-  }
-
-  .uncategorized{
-    font-family: monospace;
-    color: #23212D;
-    text-transform: uppercase;
-    background-color: #b0abb3;
-
-  }
-
-  /* mouse over link */
-a.booklink:hover {
-  color: #23212D !important;
-}
-
+    opacity: 0.8;
   }
 </style>
