@@ -9,7 +9,7 @@ classes: wide
 ---
 
 {% include base_path %}
-You can find my complete CV [here](/files/CVsubhodeepCTPIIITA.pdf){:target="_blank" rel="noopener"}
+You can find my complete CV [here](/files/subhodeepIITMcv.pdf){:target="_blank" rel="noopener"}
 
 ## Employment
 
